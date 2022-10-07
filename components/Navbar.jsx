@@ -1,3 +1,4 @@
+import { FcLikePlaceholder } from 'react-icons/fc';
 function Navbar() {
   const menu = (
     <>
@@ -14,11 +15,18 @@ function Navbar() {
       <div className="navbar container mx-auto flex justify-between">
         <div className="space-x-6">
           <a className="text-primary font-extrabold text-2xl">Safi Food!</a>
-          
           {menu}
-          
         </div>
-        <div className="flex-none">
+        <div className="flex">
+          <div className="border rounded-full p-3">
+          <FcLikePlaceholder className='text-xl'/>
+          </div>
+          <div className="border rounded-full p-3">
+          <FcLikePlaceholder className='text-xl'/>
+          </div>
+          <div className="border rounded-full p-3">
+          <FcLikePlaceholder className='text-xl'/>
+          </div>
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <div className="indicator">
