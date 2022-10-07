@@ -1,4 +1,7 @@
-import { FcLikePlaceholder } from 'react-icons/fc';
+import { FcLikePlaceholder } from "react-icons/fc";
+import { BsSearch } from "react-icons/bs";
+import { MdOutlineDeliveryDining } from "react-icons/md";
+import { GiShoppingCart } from "react-icons/gi";
 function Navbar() {
   const menu = (
     <>
@@ -11,40 +14,33 @@ function Navbar() {
     </>
   );
   return (
-    <div className="">
+    <div className="mt-3 shadow-lg">
       <div className="navbar container mx-auto flex justify-between">
         <div className="space-x-6">
           <a className="text-primary font-extrabold text-2xl">Safi Food!</a>
           {menu}
         </div>
-        <div className="flex">
-          <div className="border rounded-full p-3">
-          <FcLikePlaceholder className='text-xl'/>
+        <div className="flex space-x-4">
+          <div className="flex items-center space-x-2">
+            <MdOutlineDeliveryDining className="text-6xl text-primary" />
+            <div>
+              <p className="text-xs text-gray-400">Call and Order in</p>
+              <h2 className="text-2xl text-secondary font-bold">
+                +1 718-904-4450
+              </h2>
+            </div>
           </div>
           <div className="border rounded-full p-3">
-          <FcLikePlaceholder className='text-xl'/>
+            <BsSearch className="text-xl" />
           </div>
           <div className="border rounded-full p-3">
-          <FcLikePlaceholder className='text-xl'/>
+            <FcLikePlaceholder className="text-xl" />
           </div>
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <div className="indicator">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-                <span className="badge badge-sm indicator-item">8</span>
+                <GiShoppingCart className="text-2xl"/>
+                <span className="badge badge-sm indicator-item badge-secondary">8</span>
               </div>
             </label>
             <div
