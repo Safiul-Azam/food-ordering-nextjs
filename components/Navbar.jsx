@@ -14,7 +14,7 @@ function Navbar() {
     </>
   );
   return (
-    <div className="mt-3 shadow-lg">
+    <div className="mt-3 shadow-lg z-50">
       <div className="navbar container mx-auto flex justify-between">
         <div className="space-x-6">
           <a className="text-primary font-extrabold text-2xl">Safi Food!</a>
