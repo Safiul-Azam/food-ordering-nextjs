@@ -1,9 +1,7 @@
 import Image from "next/image";
-import banner3 from "../images/banner/banner-8.png";
-import banner1 from "../images/banner/bg-img-1.png";
+import banner3 from "../../images/banner/banner-8.png";
 
 function Banner() {
-  
   return (
       <div
         className="bg-[#CE2829]"
