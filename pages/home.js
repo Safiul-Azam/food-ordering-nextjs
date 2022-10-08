@@ -1,7 +1,9 @@
+import PopularDishes from "../components/Home/PopularDishes";
+
 function home() {
     return (
         <div>
-            Enter
+            <PopularDishes/>
         </div>
     );
 }

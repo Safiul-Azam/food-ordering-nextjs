@@ -10,7 +10,7 @@ module.exports = {
         foodOrdering: {
           primary: "#079447",
           secondary: "#FBCA10",
-          accent: "#1E1D23",
+          accent: "#CE2829",
           neutral: "#3d4451",
           "base-100": "#ffffff",
         },
