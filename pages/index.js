@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Banner from '../components/Home/Banner'
+import BestBurger from '../components/Home/BestBurger'
 import HotDog from '../components/Home/HotDog'
 import JoinUs from '../components/Home/JoinUs'
 import Menus from '../components/Home/Menus'
@@ -18,6 +19,7 @@ export default function Home() {
       <Menus/>
       <Special/>
       <HotDog/>
+      <BestBurger/>
       <JoinUs/>
     </div>
   )
