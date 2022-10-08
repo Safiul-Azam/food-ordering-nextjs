@@ -2,6 +2,8 @@ import { FcLikePlaceholder } from "react-icons/fc";
 import { BsSearch } from "react-icons/bs";
 import { MdOutlineDeliveryDining } from "react-icons/md";
 import { GiShoppingCart } from "react-icons/gi";
+import logo from '../../images/icon/logo.png'
+import Image from "next/image";
 function Navbar() {
   const menu = (
     <>
@@ -17,7 +19,8 @@ function Navbar() {
     <div className="mt-3 shadow-lg bg-base-100 z-50">
       <div className="navbar container mx-auto flex justify-between">
         <div className="space-x-6">
-          <a className="text-primary font-extrabold text-3xl">Safi <span className="text-secondary">Food!</span></a>
+          
+          <a className="text-primary font-extrabold text-3xl flex items-center"><Image src={logo} alt=''/>Safi <span className="text-secondary">Food!</span></a>
           {menu}
         </div>
         <div className="flex space-x-4">
