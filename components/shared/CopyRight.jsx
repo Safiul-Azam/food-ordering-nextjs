@@ -7,10 +7,10 @@ const CopyRight = () => {
   const year = today.getFullYear();
   return (
     <div className="text-center bg-[#CE2829]">
-      <div className="text-white text-sm tracking-wide py-8 text-center">
+      <div className="text-white text-sm tracking-wide py-6 text-center">
         <h4 className="text-lg text-white text-center">
           &copy; Copyright {year} by{" "}
-          <span className="text-secondary">Safi Food!</span>
+          <span className="text-secondary">SafiFood!</span>
         </h4>
       </div>
     </div>

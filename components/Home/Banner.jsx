@@ -12,7 +12,7 @@ function Banner() {
           backgroundSize: "cover",
         }}
       >
-        <div className="w-1/2 mx-auto space-y-2 text-center pt-12">
+        <div className="w-1/2 mx-auto space-y-5 text-center pt-12">
           <h4 className="text-2xl text-secondary font-medium py-5">
             Do not miss it!
           </h4>
