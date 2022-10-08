@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Banner from '../components/Home/Banner'
 import Menus from '../components/Home/Menus'
-import Spacial from '../components/Home/Spacial'
+import Special from '../components/Home/Special'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
       <Banner/>
       <Menus/>
-      <Spacial/>
+      <Special/>
     </div>
   )
 }
