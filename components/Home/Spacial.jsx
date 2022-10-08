@@ -15,26 +15,33 @@ function Spacial() {
         >
           <div className="space-y-6 w-3/4">
             <h2 className="text-6xl font-bold text-white">Special Deliciaus</h2>
-            <p className="text-lg text-white font-bold">Maxican Pizza Testes Better</p>
-            
+            <p className="text-lg text-white font-bold">
+              Maxican Pizza Testes Better
+            </p>
           </div>
           <div className="text-right flex justify-between items-start">
-          <button className="btn text-pink-600 rounded-full bg-white mt-6">
+            <button className="btn text-pink-600 rounded-full bg-white mt-6">
               ORDER NOW
             </button>
             <Image width={250} height={250} className="" src={offer} alt="" />
           </div>
         </div>
-        <div className="bg-[#292929] p-8 flex justify-between items-center col-span-1 mb-5">
-          <div>
-            <h2 className="text-4xl text-white">Enjoy Our Delicious Item</h2>
+        <div
+          className="bg-[#292929] p-10 rounded-2xl"
+          style={{
+            backgroundImage: `url(https://i.ibb.co/pds2HHx/2.png)`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        >
+          <div className="w-1/2 space-y-6">
+            <h2 className="text-3xl font-bold text-white">Enjoy Our Delicious Item</h2>
             <button className="text-pink-600 rounded-full btn bg-white">
               ORDER NOW
             </button>
           </div>
-          <Image src={img2} alt="" />
         </div>
-        <div className="bg-[#292929] p-8 flex justify-between items-center col-span-1">
+        <div className="">
           <div>
             <h2 className="text-4xl text-white">Enjoy Our Delicious Item</h2>
             <button className="text-pink-600 rounded-full btn bg-white">
