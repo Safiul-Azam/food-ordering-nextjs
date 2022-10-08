@@ -17,7 +17,7 @@ function Navbar() {
     <div className="mt-3 shadow-lg bg-base-100 z-50">
       <div className="navbar container mx-auto flex justify-between">
         <div className="space-x-6">
-          <a className="text-primary font-extrabold text-2xl">Safi Food!</a>
+          <a className="text-primary font-extrabold text-3xl">Safi <span className="text-secondary">Food!</span></a>
           {menu}
         </div>
         <div className="flex space-x-4">

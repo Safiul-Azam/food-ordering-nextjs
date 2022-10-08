@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 h2,
 p,
 h3,
@@ -10,7 +11,7 @@ h5,li{
   font-family: 'Open Sans', sans-serif;
 }
 a,h4{
-  font-family: 'Bungee Spice', cursive;
+  font-family: 'Satisfy', cursive;
 }
 li{
   list-style: none;
