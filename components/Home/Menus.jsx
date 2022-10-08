@@ -6,18 +6,20 @@ import category4 from "../../images/menus/category-4.png";
 import category5 from "../../images/menus/category-5.png";
 import category6 from "../../images/menus/category-6.png";
 import category7 from "../../images/menus/category-7.png";
+import category8 from "../../images/menus/category-8.png";
 function Menus() {
   const menus = [
-    { id: 1, img: category1, title: "Burger" },
-    { id: 2, img: category2, title: "Burger" },
-    { id: 3, img: category3, title: "Burger" },
-    { id: 4, img: category4, title: "Burger" },
-    { id: 5, img: category5, title: "Burger" },
-    { id: 6, img: category6, title: "Burger" },
-    { id: 7, img: category7, title: "Burger" },
+    { id: 1, img: category1, title: "COMBO" },
+    { id: 2, img: category2, title: "KIDS MENUS" },
+    { id: 3, img: category3, title: "CHICKEN" },
+    { id: 4, img: category4, title: "PIZZA" },
+    { id: 5, img: category5, title: "BURGER" },
+    { id: 6, img: category7, title: "BOX MEALS" },
+    { id: 7, img: category6, title: "SAUCES" },
+    { id: 8, img: category8, title: "DRINKS" },
   ];
   return (
-    <div className="bg-white relative shadow-lg pb-6">
+    <div className="bg-white relative shadow-lg pb-12">
       <div className="container mx-auto px-10 text-center ">
         <h2 className="btn btn-secondary px-10 relative -top-5">Menu</h2>
         <div className="flex justify-between items-center">
@@ -32,7 +34,7 @@ function Menus() {
                     alt=""
                   />
                 </div>
-                <p className="text-center font-bold">{menu.title}</p>
+                <p className="text-center text-xs font-extrabold">{menu.title}</p>
               </div>
             );
           })}
