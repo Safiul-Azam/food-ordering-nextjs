@@ -4,6 +4,7 @@ import BestBurger from '../components/Home/BestBurger'
 import HotDog from '../components/Home/HotDog'
 import JoinUs from '../components/Home/JoinUs'
 import Menus from '../components/Home/Menus'
+import PopularDishes from '../components/Home/PopularDishes'
 import Special from '../components/Home/Special'
 import styles from '../styles/Home.module.css'
 
@@ -18,6 +19,7 @@ export default function Home() {
       <Banner/>
       <Menus/>
       <Special/>
+      <PopularDishes/>
       <HotDog/>
       <BestBurger/>
       <JoinUs/>

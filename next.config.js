@@ -1,12 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+// next.config.js
 module.exports = {
   images: {
-    domains: ['assets.example.com'],
+    domains: ['https://safiul-azam.imgbb.com/'],
   },
 }
-
-module.exports = nextConfig
