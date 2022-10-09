@@ -1,6 +1,7 @@
 export const foods = [
   {
     id: 1,
+    role:"sale!",
     title: "Apricot Chicken",
     price: 18.33,
     Ingredients:
@@ -16,6 +17,7 @@ export const foods = [
   },
   {
     id: 2,
+    role:"",
     title: "Bacon Burger",
     price: 10.49,
     Ingredients:
@@ -31,6 +33,7 @@ export const foods = [
   },
   {
     id: 3,
+    role:"",
     title: "BBQ chicken breast",
     price: 8.73,
     Ingredients:
@@ -46,6 +49,7 @@ export const foods = [
   },
   {
     id: 4,
+    role:"sale!",
     title: "Black Coffee",
     price: 11.76,
     Ingredients:
@@ -61,6 +65,7 @@ export const foods = [
   },
   {
     id: 5,
+    role:"",
     title: "Blueberry Shake",
     price: 10.68,
     Ingredients:
@@ -76,6 +81,7 @@ export const foods = [
   },
   {
     id: 6,
+    role:"",
     title: "Chocolate cake",
     price: 11.27,
     Ingredients:
@@ -91,6 +97,7 @@ export const foods = [
   },
   {
     id: 7,
+    role:"",
     title: "Cheese Butter",
     price: 15.76,
     Ingredients:
@@ -106,6 +113,7 @@ export const foods = [
   },
   {
     id: 8,
+    role:"",
     title: "Chicken Burger",
     price: 18.23,
     Ingredients:
@@ -121,6 +129,7 @@ export const foods = [
   },
   {
     id: 9,
+    role:"sale!",
     title: "Country Burger",
     price: 18.23,
     Ingredients:
@@ -136,6 +145,7 @@ export const foods = [
   },
   {
     id: 10,
+    role:"",
     title: "Double Beef Burger",
     price: 13.55,
     Ingredients:
@@ -151,6 +161,7 @@ export const foods = [
   },
   {
     id: 11,
+    role:"",
     title: "Double Cheese",
     price: 9.61,
     Ingredients:
@@ -166,6 +177,7 @@ export const foods = [
   },
   {
     id: 12,
+    role:"",
     title: "Fresh Lime",
     price: 8.17,
     Ingredients:
