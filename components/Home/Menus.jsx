@@ -21,7 +21,7 @@ function Menus() {
   return (
     <div className="bg-white relative shadow-lg pb-12">
       <div className="container mx-auto px-10 text-center ">
-        <h2 className="btn btn-secondary px-10 relative -top-5">Menu</h2>
+        <button className="btn btn-secondary px-10 relative -top-5">Menu</button>
         <div className="flex justify-between items-center">
           {menus.map((menu) => {
             return (

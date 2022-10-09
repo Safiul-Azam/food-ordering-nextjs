@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import PopularDishes from "./PopularDishes";
 
 function DishesMenu() {
   const [foods, setFoods] = useState([]);
@@ -8,10 +9,10 @@ function DishesMenu() {
       .then((data) => setFoods(data));
   }, []);
   const [filterByBtn, setFilterByBtn] = useState([]);
-  const [productName, setProductName] = useState("");
+  const [foodName, setFoodName] = useState("");
   const [active, setActive] = useState("all");
 
-  const btnByProductName = [
+  const btnByFoodName = [
     { id: 1, name: "all" },
     { id: 2, name: "Pizza" },
     { id: 3, name: "Burgers" },
@@ -23,15 +24,15 @@ function DishesMenu() {
     setFilterByBtn(
       foods.filter((food) => food?.category?.toLowerCase() === btn)
     );
-    setProductName(foods.find((food) => food?.category?.toLowerCase() === btn));
+    setFoodName(foods.find((food) => food?.category?.toLowerCase() === btn));
     setActive(btn);
   };
   return (
     <>
       <div className="flex justify-center space-x-10 mb-10">
-        {btnByProductName.map((btn) => (
+        {btnByFoodName.map((btn) => (
           <div
-            className={`border flex justify-center hover:border-secondary w-28 p-2 rounded-3xl font-bold hover:duration-300 hover:ease-in-out ease-in-out duration-300 ${
+            className={`border flex justify-center hover:border-secondary w-28 p-2 rounded-3xl font-bold hover:duration-200 hover:ease-in-out ease-in-out duration-200 ${
               active === btn.name ? "bg-secondary" : ""
             }`}
             key={btn.id}
@@ -45,6 +46,7 @@ function DishesMenu() {
           </div>
         ))}
       </div>
+      {/* <PopularDishes filterByBtn={filterByBtn} productName={foodName} /> */}
     </>
   );
 }

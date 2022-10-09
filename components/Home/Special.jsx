@@ -4,7 +4,7 @@ import img3 from "../../images/spacial/3.png";
 import offer from "../../images/spacial/offer.png";
 function Special() {
   return (
-    <div className="my-24 w-full px-32">
+    <div className="py-24 w-full px-32 bg-[#F7F2E2]">
       <div className="grid grid-cols-2 grid-flow-col container gap-x-5 mx-auto">
         <div
           className="row-span-2 bg-[#CE2829] p-10 pb-0 rounded-2xl"
