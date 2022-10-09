@@ -10,7 +10,7 @@ export const foods = [
       "Crispy bacon, tasty ham, pineapple, onion and stretchy mozzarella, finished with a BBQ swirl.",
     description:
       "Although the legendary Double Burger really needs no introduction, please allow us… Tucked in between three soft buns are two all-beef patties, cheddar cheese, ketchup, onion, pickles and iceberg lettuce. Hesburger’s own paprika and cucumber mayonnaise add the crowning touch. Oh baby!",
-    category: "pizza",
+    category: "Pizza",
     SKU: "n/a",
     rating: 4.5,
     img: "https://i.ibb.co/jLMvQFp/apricot.png",
@@ -26,7 +26,7 @@ export const foods = [
       "A mighty meaty double helping of all the reasons you love our burger.",
     description:
       "Although the legendary Double Burger really needs no introduction, please allow us… Tucked in between three soft buns are two all-beef patties, cheddar cheese, ketchup, onion, pickles and iceberg lettuce. Hesburger’s own paprika and cucumber mayonnaise add the crowning touch. Oh baby!",
-    category: "pizza",
+    category: "Pizza",
     SKU: "n/a",
     rating: 4.5,
     img: "https://i.ibb.co/b7DTZx3/bacon.png",

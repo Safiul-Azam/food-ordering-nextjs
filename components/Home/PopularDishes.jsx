@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { BsBasket2Fill } from "react-icons/bs";
 import { FaHeart } from "react-icons/fa";
+import DishesMenu from "./DishesMenu";
 
 function PopularDishes() {
   const [foods, setFoods] = useState([]);
@@ -15,6 +16,7 @@ function PopularDishes() {
       <h2 className="text-center text-4xl text-black font-extrabold mb-12">
         Popular dishes
       </h2>
+      <DishesMenu />
 
       <div className="container mx-auto grid grid-cols-4 gap-8">
         {foods.map((food) => {
@@ -22,8 +24,15 @@ function PopularDishes() {
             <div key={food.id} className="rounded-3xl border">
               <div className="m-2 mb-0 px-3 pt-3 pb-7 rounded-3xl bg-yellow-50">
                 <div className="flex justify-between">
-                  <h3 className={`${food.role.length && 'font-bold text-sm bg-gray-800 rounded-xl px-3 text-white'}`}>{food?.role}</h3>
-                  <FaHeart className="text-gray-200 text-xl hover:text-gray-800" />
+                  <h3
+                    className={`${
+                      food.role.length &&
+                      "font-bold text-sm bg-gray-800 rounded-xl px-3 text-white"
+                    }`}
+                  >
+                    {food?.role}
+                  </h3>
+                  <FaHeart className="text-gray-300 text-xl hover:text-gray-800" />
                 </div>
                 <figure className="flex justify-center">
                   <img width={200} height={200} src={`${food.img}`} alt="" />
