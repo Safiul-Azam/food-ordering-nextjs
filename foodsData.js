@@ -2,7 +2,7 @@ export const foods = [
   {
     id: 1,
     title: "Apricot Chicken",
-    price: 18.3,
+    price: 18.33,
     Ingredients:
       "Dr. Praeger’s Black Bean Burger, Focaccia bun, Balsamic Vinaigrette, Pesto, Tomato, Swiss Cheese",
     shortDescription:
@@ -17,7 +17,7 @@ export const foods = [
   {
     id: 2,
     title: "Bacon Burger",
-    price: 10.9,
+    price: 10.49,
     Ingredients:
       "Dr. Praeger’s Black Bean Burger, Focaccia bun, Balsamic Vinaigrette, Pesto, Tomato, Swiss Cheese",
     shortDescription:
@@ -32,7 +32,7 @@ export const foods = [
   {
     id: 3,
     title: "BBQ chicken breast",
-    price: 8.3,
+    price: 8.73,
     Ingredients:
       "Dr. Praeger’s Black Bean Burger, Focaccia bun, Balsamic Vinaigrette, Pesto, Tomato, Swiss Cheese",
     shortDescription:
@@ -77,7 +77,7 @@ export const foods = [
   {
     id: 6,
     title: "Chocolate cake",
-    price: 11.0,
+    price: 11.27,
     Ingredients:
       "Dr. Praeger’s Black Bean Burger, Focaccia bun, Balsamic Vinaigrette, Pesto, Tomato, Swiss Cheese",
     shortDescription:
@@ -107,7 +107,7 @@ export const foods = [
   {
     id: 8,
     title: "Chicken Burger",
-    price: 18.3,
+    price: 18.23,
     Ingredients:
       "Dr. Praeger’s Black Bean Burger, Focaccia bun, Balsamic Vinaigrette, Pesto, Tomato, Swiss Cheese",
     shortDescription:
@@ -122,7 +122,7 @@ export const foods = [
   {
     id: 9,
     title: "Country Burger",
-    price: 18.3,
+    price: 18.23,
     Ingredients:
       "Dr. Praeger’s Black Bean Burger, Focaccia bun, Balsamic Vinaigrette, Pesto, Tomato, Swiss Cheese",
     shortDescription:
@@ -137,7 +137,7 @@ export const foods = [
   {
     id: 10,
     title: "Double Beef Burger",
-    price: 13.5,
+    price: 13.55,
     Ingredients:
       "Dr. Praeger’s Black Bean Burger, Focaccia bun, Balsamic Vinaigrette, Pesto, Tomato, Swiss Cheese",
     shortDescription:
@@ -152,7 +152,7 @@ export const foods = [
   {
     id: 11,
     title: "Double Cheese",
-    price: 9.1,
+    price: 9.61,
     Ingredients:
       "Dr. Praeger’s Black Bean Burger, Focaccia bun, Balsamic Vinaigrette, Pesto, Tomato, Swiss Cheese",
     shortDescription:
