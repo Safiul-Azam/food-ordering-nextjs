@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Banner from "../components/Home/Banner";
 import BestBurger from "../components/Home/BestBurger";
+import ClientSay from "../components/Home/ClientSay";
 import HotDog from "../components/Home/HotDog";
 import JoinUs from "../components/Home/JoinUs";
 import Menus from "../components/Home/Menus";
@@ -23,6 +24,7 @@ export default function Home() {
       <PopularDishes />
       <HotDog />
       <TopRecipes />
+      <ClientSay/>
       <BestBurger />
       <JoinUs />
     </div>

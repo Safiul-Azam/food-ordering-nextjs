@@ -9,7 +9,7 @@ function TopRecipes() {
       .then((data) => setFoods(data));
   }, []);
   return (
-    <div className="pt-20">
+    <div className="py-20">
       <div className="container mx-auto grid grid-cols-3 gap-5">
         <div className="col-span-2">
           <div className="flex justify-between mb-10">

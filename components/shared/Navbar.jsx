@@ -64,7 +64,7 @@ function Navbar() {
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-12 border rounded-full">
-                <img src="https://i.ibb.co/BNKwgKz/User-Profile.png" />
+                <img src="https://i.ibb.co/BNKwgKz/User-Profile.png" alt=""/>
               </div>
             </label>
             <ul
