@@ -11,12 +11,20 @@ function ClientSay() {
       .then((res) => res.json())
       .then((data) => setClientSay(data));
   }, []);
+  // 
   return (
-    <div className="py-20 bg-[#F7F2E2]">
+    <div
+      className="py-20 bg-[#F7F2E2]"
+      style={{
+        backgroundImage: "url(https://i.ibb.co/dPQcNn3/client-Say-banner.png)",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
       <h2 className="text-4xl text-gray-800 text-center font-extrabold mb-10">
         What your client says
       </h2>
-      <div className="container mx-auto">
+      <div className="container mx-auto px-10">
         <Swiper
           spaceBetween={30}
           slidesPerGroup={1}
@@ -57,11 +65,11 @@ function ClientSay() {
                       <div className="flex items-center space-x-4">
                         <div className="indicator">
                           <div className="indicator-item indicator-bottom">
-                          <BsFillChatQuoteFill className="text-2xl text-primary -mt-3 -ml-4"/>
+                            <BsFillChatQuoteFill className="text-2xl text-primary -mt-3 -ml-4" />
                           </div>
                           <div className="avatar">
                             <div className="w-16 rounded-full border">
-                              <img src={singleSay.img} alt=''/>
+                              <img src={singleSay.img} alt="" />
                             </div>
                           </div>
                         </div>

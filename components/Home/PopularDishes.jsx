@@ -32,7 +32,7 @@ function PopularDishes() {
                     >
                       {food?.role}
                     </h3>
-                    <FaHeart className="text-gray-300 text-xl hover:text-gray-800" />
+                    <FaHeart className="text-gray-300 text-xl hover:text-red-500" />
                   </div>
                   <figure className="flex justify-center">
                     <img width={200} height={200} src={`${food.img}`} alt="" />

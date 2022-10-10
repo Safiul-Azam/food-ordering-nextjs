@@ -21,11 +21,11 @@ function Menus() {
   return (
     <div className="bg-white relative shadow-lg pb-12">
       <div className="container mx-auto px-10 text-center ">
-        <button className="btn btn-secondary px-10 relative -top-5">Menu</button>
+        <button className="btn btn-secondary font-bold px-10 relative -top-5">Menu</button>
         <div className="flex justify-between items-center">
           {menus.map((menu) => {
             return (
-              <div key={menu.id} className="">
+              <div key={menu.id} className="group">
                 <div className="w-32 h-24">
                   <Image
                     className=""
@@ -34,7 +34,7 @@ function Menus() {
                     alt=""
                   />
                 </div>
-                <p className="text-center text-xs font-extrabold">{menu.title}</p>
+                <p className="text-center text-xs font-extrabold group-hover:text-secondary hover:duration-300 hover:ease-in-out ease-in-out duration-300">{menu.title}</p>
               </div>
             );
           })}
