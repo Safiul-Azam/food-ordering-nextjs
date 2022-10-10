@@ -6,7 +6,7 @@ export const clientSay = [
     description:
       "I am completely blown away. I would also like to say thank you to all your staff. It's really wonderful.",
     rating: 4.5,
-    img: "https://i.ibb.co/jLMvQFp/apricot.png",
+    img: "https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/09/avatar-2.jpg",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const clientSay = [
     description:
       " I would be lost without restaurant. I would like to personally thank you for your outstanding product.",
     rating: 4.5,
-    img: "https://i.ibb.co/b7DTZx3/bacon.png",
+    img: "https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/09/avatar-3.jpg",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const clientSay = [
     description:
       "Forget the trendy pizza shops, This hidden spot makes the best New York-style pizza slice in naples",
     rating: 4.5,
-    img: "https://i.ibb.co/D57D0pk/BBQ.png",
+    img: "https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/09/avatar-4.jpg",
   },
   {
     id: 4,
@@ -33,6 +33,6 @@ export const clientSay = [
     description:
       "I would be lost without restaurant. I would like to personally thank you for your outstanding product.",
     rating: 4.5,
-    img: "https://i.ibb.co/D57D0pk/BBQ.png",
+    img: "https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/09/avatar-1.jpg",
   },
 ];

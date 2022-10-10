@@ -20,7 +20,7 @@ function TopRecipes() {
             {foods.slice(0, 6).map((food) => {
               return (
                 <div key={food.id} className="border rounded-3xl p-3">
-                  <div className="flex justify-between items-center rounded-2xl bg-yellow-50 p-3">
+                  <div className="flex justify-between items-center rounded-2xl bg-[#F7F2E2] p-3">
                     <img width={100} height={100} src={food.img} alt="" />
                     <div className="w-1/2">
                       <h3 className="text-xl font-bold">{food.title}</h3>

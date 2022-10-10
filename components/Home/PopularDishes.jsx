@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { BsBasket2Fill } from "react-icons/bs";
 import { FaHeart } from "react-icons/fa";
@@ -23,7 +22,7 @@ function PopularDishes() {
           {foods.slice(0, 8).map((food) => {
             return (
               <div key={food.id} className="rounded-3xl border">
-                <div className="m-2 mb-0 px-3 pt-3 pb-7 rounded-3xl hover:bg-yellow-50 hover:duration-500 hover:ease-in-out ease-in-out duration-500 ">
+                <div className="m-2 mb-0 px-3 pt-3 pb-7 rounded-3xl hover:bg-[#F7F2E2] hover:duration-500 hover:ease-in-out ease-in-out duration-500 ">
                   <div className="flex justify-between">
                     <h3
                       className={`${
