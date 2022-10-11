@@ -1,22 +1,10 @@
-import { useEffect, useState } from "react";
 import { FcLikePlaceholder } from "react-icons/fc";
 import { BsSearch } from "react-icons/bs";
 import { MdOutlineDeliveryDining } from "react-icons/md";
 import { GiShoppingCart } from "react-icons/gi";
 import logo from "../../images/icon/logo.png";
 import Image from "next/image";
-import ScrollNavbar from "./ScrollNavbar";
-function Navbar() {
-  const [scroll, setScroll] = useState(false);
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 0) {
-        setScroll(true);
-      } else {
-        setScroll(false);
-      }
-    });
-  }, []);
+function ScrollNavbar() {
   const menu = (
     <>
       <li>HOME</li>
@@ -28,8 +16,7 @@ function Navbar() {
     </>
   );
   return (
-    <>
-    {scroll ? <ScrollNavbar /> :<div className="mt-3 shadow-lg bg-base-100 z-50">
+    <div className="w-full bg-base-100 fixed mx-auto z-10 shadow-lg ">
       <div className="navbar container mx-auto flex justify-between">
         <div className="space-x-6">
           <a className="text-primary font-extrabold text-3xl flex items-center">
@@ -104,9 +91,8 @@ function Navbar() {
           </div>
         </div>
       </div>
-    </div>}
-    </>
+    </div>
   );
 }
 
-export default Navbar;
+export default ScrollNavbar;
