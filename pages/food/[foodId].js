@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { FaHeart, FaMinus, FaPlus } from "react-icons/fa";
+import RelatedFood from "../../components/SingleFood/RelatedFood";
 
 function singleFood() {
+
+    
   const food = {
     id: 2,
     role: "sale!",
@@ -21,7 +24,7 @@ function singleFood() {
   return (
     <>
       <div className="py-20 container mx-auto flex space-x-10 items-center">
-        <div className="w-1/2 border p-3 rounded-3xl">
+        <div className="w-1/2  border p-3 rounded-3xl">
           <img
             className="w-full p-8 rounded-2xl bg-[#F7F4EF]"
             src={food.img}
@@ -89,6 +92,10 @@ function singleFood() {
             <p className="text-[#80808C]">{food.description}</p>
             <p className="text-[#80808C]">Ingredients: {food.Ingredients}</p>
           </div>
+      </div>
+      <div className="">
+        <h3 className="text-3xl font-extrabold text-center text-black">RELATED PRODUCTS</h3>
+        <RelatedFood/>
       </div>
     </>
   );

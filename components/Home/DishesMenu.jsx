@@ -4,7 +4,7 @@ import PopularDishes from "./PopularDishes";
 function DishesMenu() {
   const [foods, setFoods] = useState([]);
   useEffect(() => {
-    fetch("api/foods/")
+    fetch("api/foods")
       .then((res) => res.json())
       .then((data) => setFoods(data));
   }, []);
