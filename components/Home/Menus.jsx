@@ -19,7 +19,7 @@ function Menus() {
     { id: 8, img: category8, title: "DRINKS" },
   ];
   return (
-    <div className="bg-white relative shadow-lg pb-12">
+    <div className="bg-white relative shadow pb-12">
       <div className="container mx-auto px-10 text-center ">
         <button className="btn btn-secondary font-bold px-10 relative -top-5">Menu</button>
         <div className="flex justify-between items-center">

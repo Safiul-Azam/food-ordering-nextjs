@@ -4,18 +4,11 @@ import { BsBasket2Fill } from "react-icons/bs";
 import { FaHeart } from "react-icons/fa";
 // import DishesMenu from "./DishesMenu";
 
-function PopularDishes({ filterByBtn }) {
-  console.log(filterByBtn);
-  const [foods, setFoods] = useState([]);
-  useEffect(() => {
-    fetch("api/foods/")
-      .then((res) => res.json())
-      .then((data) => setFoods(data));
-  }, []);
+function PopularDishes({ filterByBtn, foods }) {
   return (
     <>
       <div className="container mx-auto grid grid-cols-4 gap-8 mb-10">
-        {filterByBtn?.length >= 0
+        {filterByBtn?.length > 0
           ? filterByBtn.map((food) => {
               return (
                 <div key={food.id} className="rounded-3xl border">

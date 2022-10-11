@@ -51,7 +51,7 @@ function DishesMenu() {
           ))}
         </div>
       </div>
-      <PopularDishes filterByBtn={filterByBtn} />
+      <PopularDishes filterByBtn={filterByBtn} foods={foods} />
     </>
   );
 }
