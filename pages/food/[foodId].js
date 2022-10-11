@@ -1,10 +1,10 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { FaHeart, FaMinus, FaPlus } from "react-icons/fa";
 import RelatedFood from "../../components/SingleFood/RelatedFood";
+import ScrollFoodView from "../../components/SingleFood/ScrollFoodView";
 
 function singleFood() {
-
-    
   const food = {
     id: 2,
     role: "sale!",
@@ -21,6 +21,16 @@ function singleFood() {
     rating: 4.5,
     img: "https://i.ibb.co/jLMvQFp/apricot.png",
   };
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    });
+  }, []);
   return (
     <>
       <div className="py-20 container mx-auto flex space-x-10 items-center">
@@ -97,6 +107,7 @@ function singleFood() {
         <h3 className="text-3xl font-extrabold text-center text-black">RELATED PRODUCTS</h3>
         <RelatedFood/>
       </div>
+      {scroll && <ScrollFoodView food={food}/>}
     </>
   );
 }
