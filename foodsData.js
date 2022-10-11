@@ -26,7 +26,7 @@ export const foods = [
       "A mighty meaty double helping of all the reasons you love our burger.",
     description:
       "Although the legendary Double Burger really needs no introduction, please allow us… Tucked in between three soft buns are two all-beef patties, cheddar cheese, ketchup, onion, pickles and iceberg lettuce. Hesburger’s own paprika and cucumber mayonnaise add the crowning touch. Oh baby!",
-    category: "Burger",
+    category: "Pizza",
     SKU: "n/a",
     rating: 4.5,
     img: "https://i.ibb.co/b7DTZx3/bacon.png",
@@ -90,7 +90,7 @@ export const foods = [
       "Browse unique Coca-Cola products, clothing, & accessories, or customize Coke bottles and gifts",
     description:
       "Although the legendary Double Burger really needs no introduction, please allow us… Tucked in between three soft buns are two all-beef patties, cheddar cheese, ketchup, onion, pickles and iceberg lettuce. Hesburger’s own paprika and cucumber mayonnaise add the crowning touch. Oh baby!",
-    category: "Desserts",
+    category: "Dessert",
     SKU: "n/a",
     rating: 4.7,
     img: "https://i.ibb.co/zZZs5jj/cake-choc.png",

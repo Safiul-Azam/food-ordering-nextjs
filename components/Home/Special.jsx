@@ -21,7 +21,7 @@ function Special() {
             </p>
           </div>
           <div className="text-right flex justify-between items-start">
-            <button className="btn text-pink-600 rounded-full bg-white mt-6">
+            <button className="btn border-none text-pink-600 rounded-full bg-white mt-6">
               ORDER NOW
             </button>
             <Image width={250} height={250} className="" src={offer} alt="" />
@@ -39,7 +39,7 @@ function Special() {
             <h2 className="text-3xl font-bold text-white">
               Enjoy Our Delicious Item
             </h2>
-            <button className="text-pink-600 rounded-full btn bg-white">
+            <button className="text-pink-600 rounded-full btn border-none bg-white">
               ORDER NOW
             </button>
           </div>
@@ -64,7 +64,7 @@ function Special() {
               <h2 className="text-3xl font-bold">
                 Enjoy Our Delicious Item
               </h2>
-              <button className="text-pink-600 rounded-full btn bg-white">
+              <button className="text-pink-600 rounded-full btn border-none bg-white">
                 ORDER NOW
               </button>
             </div>

@@ -9,6 +9,7 @@ import PopularDishes from "../components/Home/PopularDishes";
 import Special from "../components/Home/Special";
 import TopRecipes from "../components/Home/TopRecipes";
 import styles from "../styles/Home.module.css";
+import DishesMenu from '../components/Home/DishesMenu'
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Banner />
       <Menus />
       <Special />
+      <DishesMenu/>
       <PopularDishes />
       <HotDog />
       <TopRecipes />
