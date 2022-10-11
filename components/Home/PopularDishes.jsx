@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BsBasket2Fill } from "react-icons/bs";
 import { FaHeart } from "react-icons/fa";
@@ -22,7 +23,7 @@ function PopularDishes({ filterByBtn, foods }) {
                       >
                         {food?.role}
                       </h3>
-                      <FaHeart className="text-gray-300 text-xl hover:text-red-500" />
+                      <FaHeart className="text-gray-300 text-xl hover:text-red-500 cursor-pointer" />
                     </div>
                     <figure className="flex justify-center">
                       <Image
@@ -34,9 +35,11 @@ function PopularDishes({ filterByBtn, foods }) {
                     </figure>
                   </div>
                   <div className="p-5">
-                    <h2 className="text-lg font-bold text-black py-2">
-                      {food.title}
-                    </h2>
+                    <Link href={`/food/${food.id}`}>
+                      <h2 className="text-lg font-bold text-black py-2 hover:text-secondary cursor-pointer hover:duration-300 hover:ease-in-out ease-in-out duration-300">
+                        {food.title}
+                      </h2>
+                    </Link>
                     <p className="text-sm text-gray-500">{`${food.shortDescription.slice(
                       0,
                       69
@@ -46,7 +49,7 @@ function PopularDishes({ filterByBtn, foods }) {
                         ${food.price}
                       </p>
                       <div className="bg-secondary p-3 rounded-xl">
-                        <BsBasket2Fill className="hover:text-white text-black" />
+                        <BsBasket2Fill className="hover:text-white text-black cursor-pointer" />
                       </div>
                     </div>
                   </div>
@@ -78,9 +81,11 @@ function PopularDishes({ filterByBtn, foods }) {
                     </figure>
                   </div>
                   <div className="p-5">
-                    <h2 className="text-lg font-bold text-black py-2">
-                      {food.title}
-                    </h2>
+                  <Link href={`/food/${food.id}`}>
+                      <h2 className="text-lg font-bold text-black py-2 hover:text-secondary cursor-pointer hover:duration-300 hover:ease-in-out ease-in-out duration-300">
+                        {food.title}
+                      </h2>
+                    </Link>
                     <p className="text-sm text-gray-500">{`${food.shortDescription.slice(
                       0,
                       69
@@ -99,7 +104,7 @@ function PopularDishes({ filterByBtn, foods }) {
             })}
       </div>
       <div className="text-center pb-16">
-        <button className="btn btn-secondary px-10">All Foods</button>
+        <button className="btn btn-secondary px-10 font-bold">All Foods</button>
       </div>
     </>
   );
