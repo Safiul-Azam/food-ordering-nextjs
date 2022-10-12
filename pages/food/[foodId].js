@@ -93,7 +93,7 @@ function singleFood() {
         </div>
       </div>
       <div className="pb-16">
-        <div className="text-center pb-16">
+        <div className="text-center pb-12">
           <button className="btn btn-secondary px-10 font-bold">
             Description
           </button>
