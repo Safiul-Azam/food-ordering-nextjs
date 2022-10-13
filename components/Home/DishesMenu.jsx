@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import PopularDishes from "./PopularDishes";
 
-function DishesMenu() {
-  const [foods, setFoods] = useState([]);
-  useEffect(() => {
-    fetch("api/foods")
-      .then((res) => res.json())
-      .then((data) => setFoods(data));
-  }, []);
+function DishesMenu({foods}) {
+  // const [foods, setFoods] = useState([]);
+  // useEffect(() => {
+  //   fetch("api/foods")
+  //     .then((res) => res.json())
+  //     .then((data) => setFoods(data));
+  // }, []);
+  console.log(foods)
   const [filterByBtn, setFilterByBtn] = useState([]);
   const [active, setActive] = useState("all");
 
