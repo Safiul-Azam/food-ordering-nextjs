@@ -29,6 +29,9 @@ const foodsSchema = new mongoose.Schema(
     SKU: {
       type: String,
     },
+    role:{
+      type:String,
+    },
     img: {
       type: String,
       require: true,
