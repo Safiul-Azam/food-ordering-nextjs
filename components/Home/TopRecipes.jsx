@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { BsArrowRight, BsBasket2Fill } from "react-icons/bs";
 
 function TopRecipes({foods}) {
@@ -15,7 +15,7 @@ function TopRecipes({foods}) {
               return (
                 <div key={food.id} className="border rounded-3xl p-3">
                   <div className="flex justify-between items-center rounded-2xl bg-[#F7F2E2] p-3">
-                    <img width={100} height={100} src={food.img} alt="" />
+                    <Image width={100} height={100} src={food.img} alt="" />
                     <div className="w-1/2">
                       <h3 className="text-xl font-bold">{food.title}</h3>
                       <p className="text-sm">{food.category}</p>

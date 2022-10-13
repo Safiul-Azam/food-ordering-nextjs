@@ -18,14 +18,14 @@ function Navbar() {
     });
   }, []);
   const menu = (
-    <>
-      <li>HOME</li>
-      <li>ABOUT</li>
-      <li>ROOM & SUITES</li>
-      <li>RESTAURANT</li>
-      <li>SPA</li>
-      <li>CONTACT</li>
-    </>
+    <ul className="flex space-x-10 text-sm">
+      <li>Home</li>
+      <li>Menu</li>
+      <li>About</li>
+      <li>Blog</li>
+      <li>Page</li>
+      <li>Contact</li>
+    </ul>
   );
   return (
     <>
