@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BsArrowRight, BsBasket2Fill } from "react-icons/bs";
 
-function TopRecipes() {
-  const [foods, setFoods] = useState([]);
-  useEffect(() => {
-    fetch("api/foods/")
-      .then((res) => res.json())
-      .then((data) => setFoods(data));
-  }, []);
+function TopRecipes({foods}) {
   return (
     <div className="py-20">
       <div className="container mx-auto grid grid-cols-3 gap-5">

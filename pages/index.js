@@ -25,7 +25,7 @@ export default function Home({foods}) {
       <Special />
       <DishesMenu foods={foods}/>
       <HotDog />
-      <TopRecipes />
+      <TopRecipes foods={foods}/>
       <ClientSay/>
       <BestBurger />
       <JoinUs />
