@@ -10,9 +10,24 @@ const foodsSchema = new mongoose.Schema(
       type: String,
       require: true,
     },
+    shortDescription: {
+      type: String,
+      require: true,
+    },
     Ingredients: {
       type: String,
       require: true,
+    },
+    category: {
+      type: String,
+      require: true,
+    },
+    rating: {
+      type: Number,
+      max: 5,
+    },
+    SKU: {
+      type: String,
     },
     img: {
       type: String,
@@ -25,4 +40,4 @@ const foodsSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-export default mongoose.models.food ||mongoose.model("Food", foodsSchema);
+export default mongoose.models.Food || mongoose.model("Food", foodsSchema);

@@ -10,8 +10,9 @@ import Special from "../components/Home/Special";
 import TopRecipes from "../components/Home/TopRecipes";
 import styles from "../styles/Home.module.css";
 import DishesMenu from '../components/Home/DishesMenu'
+import axios from "axios";
 
-export default function Home() {
+export default function Home({foods}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -22,7 +23,7 @@ export default function Home() {
       <Banner />
       <Menus />
       <Special />
-      <DishesMenu/>
+      <DishesMenu foods={foods}/>
       <HotDog />
       <TopRecipes />
       <ClientSay/>
@@ -31,5 +32,13 @@ export default function Home() {
     </div>
   );
 }
-// orderingFood
-// xu1hcXnSLgGHD1uF
+
+export async function getServerSideProps(ctx){
+  const res = await axios.get('http://localhost:3000/api/foods')
+
+  return {
+    props:{
+      foods:res.data
+    }
+  }
+}
