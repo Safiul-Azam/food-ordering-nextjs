@@ -5,7 +5,7 @@ function BurgerIdeas() {
 
   return (
     <div
-      className="container mx-auto flex justify-between"
+      className="container mx-auto flex justify-between py-20"
       style={{
         backgroundImage: "url(https://i.ibb.co/fpN6zyk/vector2-about.png)",
         backgroundPosition: "center",
@@ -19,10 +19,10 @@ function BurgerIdeas() {
         <p className="text-sm text-gray-500">Although the legendary Double Burger really needs no introduction, please allow us… Tucked in between three soft buns are two all-beef patties, cheddar cheese, ketchup, onion, pickles and iceberg lettuce. Hesburger’s own paprika and cucumber mayonnaise add the crowning touch. Oh baby!</p>
         <button className="btn btn-secondary px-10 font-bold">ORDER NOW</button>
       </div>
-      <div className='grid grid-rows-3 gap-4 grid-flow-col w-full'>
-        <img className='row-span-2' src='https://i.ibb.co/Z86cJWL/image1-h4.jpg' alt="" />
-        <img className='col-span-2' src='https://i.ibb.co/L9n7M1z/image3-h4.jpg' alt="" />
-        <img className='row-span-2' src='https://i.ibb.co/9TvFf2X/image2-h4.jpg' alt="" />
+      <div className='grid grid-cols-3 w-full'>
+        <img className='' src='https://i.ibb.co/Z86cJWL/image1-h4.jpg' alt="" />
+        <img className='' src='https://i.ibb.co/L9n7M1z/image3-h4.jpg' alt="" />
+        <img className='' src='https://i.ibb.co/9TvFf2X/image2-h4.jpg' alt="" />
       </div>
     </div>
   );
