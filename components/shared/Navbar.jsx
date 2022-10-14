@@ -31,7 +31,7 @@ function Navbar() {
         </Link>
       </li>
       <li>
-        <Link href="/">
+        <Link href="/about">
           <a>About</a>
         </Link>
       </li>
@@ -57,7 +57,7 @@ function Navbar() {
       {scroll ? (
         <ScrollNavbar />
       ) : (
-        <div className="mt-3 shadow-lg bg-base-100 z-50">
+        <div className="mt-3 shadow-lg bg-base-100 z-50 pb-5">
           <div className="navbar container mx-auto flex justify-between">
             <div className="space-x-6">
               <a className="text-primary font-extrabold text-3xl flex items-center">

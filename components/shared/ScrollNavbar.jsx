@@ -4,16 +4,41 @@ import { MdOutlineDeliveryDining } from "react-icons/md";
 import { GiShoppingCart } from "react-icons/gi";
 import logo from "../../images/icon/logo.png";
 import Image from "next/image";
+import Link from "next/link";
 function ScrollNavbar() {
   const menu = (
-    <>
-      <li>HOME</li>
-      <li>ABOUT</li>
-      <li>ROOM & SUITES</li>
-      <li>RESTAURANT</li>
-      <li>SPA</li>
-      <li>CONTACT</li>
-    </>
+    <ul className="flex space-x-10 text-sm">
+      <li>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/">
+          <a>Menu</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/">
+          <a>Blog</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/">
+          <a>Page</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/">
+          <a>Contact</a>
+        </Link>
+      </li>
+    </ul>
   );
   return (
     <div className="w-full bg-base-100 fixed mx-auto z-10 shadow-lg ">
