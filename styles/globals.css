@@ -12,8 +12,9 @@ h5,li{
 }
 a,h4{
   font-family: 'Satisfy', cursive;
+  
+  font-weight: 800;
 }
 li{
   list-style: none;
-  font-weight: 800;
 }
