@@ -1,6 +1,7 @@
 import Banner from "../components/About/Banner";
 import BurgerIdeas from "../components/About/BurgerIdeas";
 import ClientSay from "../components/About/ClientSay";
+import DeliveryTime from "../components/About/DeliveryTime";
 import PromotionalVideo from "../components/About/PromotionalVideo";
 import Quality from "../components/About/Quality";
 import TalentedChefs from "../components/About/TalentedChefs";
@@ -14,6 +15,7 @@ function about({ reviews }) {
       <Quality />
       <ClientSay reviews={reviews} />
       <TalentedChefs />
+      <DeliveryTime/>
     </div>
   );
 }
