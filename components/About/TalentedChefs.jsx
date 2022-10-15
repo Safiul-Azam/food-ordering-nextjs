@@ -8,7 +8,7 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaPinterestP } from 'react-icons/f
 const TalentedChefs = () => {
     const [Chefs, setChefs] = useState([])
     useEffect(() => {
-        fetch('team.json')
+        fetch('http://localhost:3000/api/chefs')
             .then(res => res.json())
             .then(data => setChefs(data))
     }, [])

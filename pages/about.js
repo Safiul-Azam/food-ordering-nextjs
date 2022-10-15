@@ -3,6 +3,7 @@ import BurgerIdeas from "../components/About/BurgerIdeas";
 import ClientSay from "../components/About/ClientSay";
 import PromotionalVideo from "../components/About/PromotionalVideo";
 import Quality from "../components/About/Quality";
+import TalentedChefs from "../components/About/TalentedChefs";
 
 function about({ reviews }) {
   return (
@@ -12,6 +13,7 @@ function about({ reviews }) {
       <PromotionalVideo />
       <Quality />
       <ClientSay reviews={reviews} />
+      <TalentedChefs />
     </div>
   );
 }
