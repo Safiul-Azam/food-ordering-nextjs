@@ -1,10 +1,10 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { AiFillStar } from "react-icons/ai";
-import { BsFillChatQuoteFill } from "react-icons/bs";
-import { Autoplay } from "swiper";
-import "swiper/css";
+import { BsChatQuoteFill } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay, Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
 function ClientSay() {
   const [clientSay, setClientSay] = useState([]);
   useEffect(() => {
@@ -14,90 +14,61 @@ function ClientSay() {
   }, []);
   return (
     <div
-      className="container mx-auto flex justify-between py-20 space-x-16 items-center"
+      className="text-center static text-white"
       style={{
-        backgroundImage: "url(https://i.ibb.co/fpN6zyk/vector2-about.png)",
-        backgroundPosition: "bottom",
-        backgroundSize: "200px",
-        backgroundRepeat: "no-repeat",
+        background: `linear-gradient(rgb(0,0,0,0.6),rgb(0,0,0,0.6)),url(https://i.ibb.co/8bZ50m9/bg3-h4.jpg)`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="container mx-auto px-10">
+      <div className="w-3/4 mx-auto px-10 py-20">
         <Swiper
           spaceBetween={30}
-          slidesPerGroup={1}
+          pagination={{
+            clickable: true,
+          }}
           autoplay={{
-            delay: 3000,
+            delay: 3500,
             disableOnInteraction: false,
           }}
           loop={true}
-          loopFillGroupWithBlank={true}
-          breakpoints={{
-            640: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 40,
-            },
-            1024: {
-              slidesPerView: 2,
-              spaceBetween: 50,
-            },
-            1200: {
-              slidesPerView: 3,
-              spaceBetween: 50,
-            },
-          }}
           navigation={true}
-          modules={[Autoplay]}
+          loopFillGroupWithBlank={true}
+          modules={[Pagination, Autoplay, Navigation]}
           className="mySwiper"
         >
           {clientSay.map((singleSay) => (
             <SwiperSlide key={singleSay._id}>
-              <div>
-                <div className="card bg-white rounded-xl">
-                  <div className="card-body space-y-4">
-                    <div className="flex justify-between items-center">
-                      <div className="flex items-center space-x-4">
-                        <div className="indicator">
-                          <div className="indicator-item indicator-bottom">
-                            <BsFillChatQuoteFill className="text-2xl text-primary -mt-3 -ml-4" />
-                          </div>
-                          <div className="avatar">
-                            <div className="w-16 rounded-full border">
-                              <img src={singleSay.img} alt="" />
-                            </div>
-                          </div>
-                        </div>
-                        <div>
-                          <h3 className="text-lg font-bold">
-                            {singleSay.client}
-                          </h3>
-                          <h3 className="text-gray-400 text-sm">
-                            {singleSay.job}
-                          </h3>
-                        </div>
-                      </div>
-                      <div className="flex">
-                        {[...Array(parseInt(singleSay.rating))].map(
-                          (star, i) => {
-                            return (
-                              <AiFillStar
-                                key={i}
-                                className="text-lg"
-                                color={singleSay.rating ? "#FACA51" : "#EFF0F5"}
-                              />
-                            );
-                          }
-                        )}
+              <div className="card-body mb-6">
+                <div className="flex justify-center items-center flex-col space-y-7">
+                  <div className="indicator">
+                    <div className="indicator-item indicator-bottom">
+                      <BsChatQuoteFill className="text-4xl text-primary  -mt-10 -ml-2" />
+                    </div>
+                    <div className="avatar">
+                      <div className="w-32 rounded-full border">
+                        <img src={singleSay.img} alt="" />
                       </div>
                     </div>
-                    <p className="text-base text-gray-500 tracking-normal">
-                      &quot;{singleSay.review}&quot;
-                    </p>
+                  </div>
+                  <div className="flex">
+                    {[...Array(parseInt(singleSay.rating))].map((star, i) => {
+                      return (
+                        <AiFillStar
+                          key={i}
+                          className="text-lg"
+                          color={singleSay.rating ? "#FACA51" : "#EFF0F5"}
+                        />
+                      );
+                    })}
+                  </div>
+                  <h2 className="text-3xl font-bold mb-4">
+                    &quot;{singleSay.review}&quot;
+                  </h2>
+                  <div>
+                    <h3 className="text-lg font-bold">{singleSay.client}</h3>
+                    <h3 className="">{singleSay.job}</h3>
                   </div>
                 </div>
               </div>

@@ -21,3 +21,12 @@ li{
 a:hover{
   color:#FDC912;
 }
+.swiper-pagination-bullet-active {
+  background-color: #FBCA10 !important;
+}
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: #FBCA10 !important;
+
+}
