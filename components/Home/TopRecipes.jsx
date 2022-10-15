@@ -13,7 +13,7 @@ function TopRecipes({foods}) {
           <div className="grid grid-cols-2 gap-3">
             {foods.slice(0, 6).map((food) => {
               return (
-                <div key={food.id} className="border rounded-3xl p-3">
+                <div key={food._id} className="border rounded-3xl p-3">
                   <div className="flex justify-between items-center rounded-2xl bg-[#F7F2E2] p-3">
                     <Image width={100} height={100} src={food.img} alt="" />
                     <div className="w-1/2">
