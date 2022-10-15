@@ -4,6 +4,7 @@ import { BsBasket2Fill } from "react-icons/bs";
 import { FaHeart } from "react-icons/fa";
 
 function PopularDishes({ filterByBtn, foods }) {
+  
   return (
     <>
       <div className="container mx-auto grid grid-cols-4 gap-8 mb-10">
@@ -15,7 +16,7 @@ function PopularDishes({ filterByBtn, foods }) {
                     <div className="flex justify-between">
                       <h3
                         className={`${
-                          food?.role?.length &&
+                          food?.role?.length > 0 &&
                           "font-bold text-sm bg-gray-800 rounded-xl px-3 text-white"
                         }`}
                       >
@@ -33,7 +34,7 @@ function PopularDishes({ filterByBtn, foods }) {
                     </figure>
                   </div>
                   <div className="p-5">
-                    <Link href={`/food/${food.id}`}>
+                    <Link href={`/food/${food._id}`}>
                       <h2 className="text-lg font-bold text-black py-2 hover:text-secondary cursor-pointer hover:duration-300 hover:ease-in-out ease-in-out duration-300">
                         {food.title}
                       </h2>
@@ -61,7 +62,7 @@ function PopularDishes({ filterByBtn, foods }) {
                     <div className="flex justify-between">
                       <h3
                         className={`${
-                          food?.role?.length &&
+                          food?.role?.length > 0 &&
                           "font-bold text-sm bg-gray-800 rounded-xl px-3 text-white"
                         }`}
                       >
@@ -79,7 +80,7 @@ function PopularDishes({ filterByBtn, foods }) {
                     </figure>
                   </div>
                   <div className="p-5">
-                  <Link href={`/food/${food.id}`}>
+                  <Link href={`/food/${food._id}`}>
                       <h2 className="text-lg font-bold text-black py-2 hover:text-secondary cursor-pointer hover:duration-300 hover:ease-in-out ease-in-out duration-300">
                         {food.title}
                       </h2>

@@ -22,4 +22,7 @@ function ScrollFoodView({ food }) {
   );
 }
 
+
+
+
 export default ScrollFoodView;

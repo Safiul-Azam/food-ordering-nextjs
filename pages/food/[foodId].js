@@ -1,26 +1,28 @@
-import React,{ useEffect, useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { FaHeart, FaMinus, FaPlus } from "react-icons/fa";
 import RelatedFood from "../../components/SingleFood/RelatedFood";
 import ScrollFoodView from "../../components/SingleFood/ScrollFoodView";
 
-function singleFood() {
+function singleFood({ food }) {
+  console.log(food);
   const [scroll, setScroll] = useState(false);
-  const food = {
-    id: 2,
-    role: "sale!",
-    title: "Apricot Chicken",
-    price: 18.33,
-    Ingredients:
-      "Dr. Praeger’s Black Bean Burger, Focaccia bun, Balsamic Vinaigrette, Pesto, Tomato, Swiss Cheese",
-    shortDescription:
-      "Crispy bacon, tasty ham, pineapple, onion and stretchy mozzarella, finished with a BBQ swirl.",
-    description:
-      "Although the legendary Double Burger really needs no introduction, please allow us… Tucked in between three soft buns are two all-beef patties, cheddar cheese, ketchup, onion, pickles and iceberg lettuce. Hesburger’s own paprika and cucumber mayonnaise add the crowning touch. Oh baby!",
-    category: "Pizza",
-    SKU: "n/a",
-    rating: 4.5,
-    img: "https://i.ibb.co/jLMvQFp/apricot.png",
-  };
+  // const food = {
+  //   id: 2,
+  //   role: "sale!",
+  //   title: "Apricot Chicken",
+  //   price: 18.33,
+  //   Ingredients:
+  //     "Dr. Praeger’s Black Bean Burger, Focaccia bun, Balsamic Vinaigrette, Pesto, Tomato, Swiss Cheese",
+  //   shortDescription:
+  //     "Crispy bacon, tasty ham, pineapple, onion and stretchy mozzarella, finished with a BBQ swirl.",
+  //   description:
+  //     "Although the legendary Double Burger really needs no introduction, please allow us… Tucked in between three soft buns are two all-beef patties, cheddar cheese, ketchup, onion, pickles and iceberg lettuce. Hesburger’s own paprika and cucumber mayonnaise add the crowning touch. Oh baby!",
+  //   category: "Pizza",
+  //   SKU: "n/a",
+  //   rating: 4.5,
+  //   img: "https://i.ibb.co/jLMvQFp/apricot.png",
+  // };
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
@@ -76,7 +78,9 @@ function singleFood() {
           </div>
           <hr className="border-gray-200" />
           <ul className="space-y-3 px-10">
-            <li className="list-disc text-[#80808C]">Free global shipping on all orders</li>
+            <li className="list-disc text-[#80808C]">
+              Free global shipping on all orders
+            </li>
             <li className="list-disc text-[#80808C]">
               30 days easy returns if you change your mind
             </li>
@@ -97,18 +101,29 @@ function singleFood() {
             Description
           </button>
         </div>
-          <div className="w-3/4 mx-auto text-[#80808C]">
-            <p className="text-[#80808C]">{food.description}</p>
-            <p className="text-[#80808C]">Ingredients: {food.Ingredients}</p>
-          </div>
+        <div className="w-3/4 mx-auto text-[#80808C]">
+          <p className="text-[#80808C]">{food.description}</p>
+          <p className="text-[#80808C]">Ingredients: {food.Ingredients}</p>
+        </div>
       </div>
       <div className="">
-        <h3 className="text-3xl font-extrabold text-center text-black">RELATED PRODUCTS</h3>
-        <RelatedFood/>
+        <h3 className="text-3xl font-extrabold text-center text-black">
+          RELATED PRODUCTS
+        </h3>
+        <RelatedFood />
       </div>
-      {scroll && <ScrollFoodView food={food}/>}
+      {scroll && <ScrollFoodView food={food} />}
     </>
   );
 }
+export async function getServerSideProps({params}) {
 
+  const res = await axios.get(`http://localhost:3000/api/foods/${params.foodId}`);
+
+  return {
+    props: {
+      food: res.data,
+    },
+  };
+}
 export default singleFood;
