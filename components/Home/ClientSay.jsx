@@ -1,17 +1,18 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { BsFillChatQuoteFill } from "react-icons/bs";
 import { Autoplay } from "swiper";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-function ClientSay() {
+function ClientSay({reviews}) {
   const [clientSay, setClientSay] = useState([]);
   useEffect(() => {
     fetch("api/clientSay/")
       .then((res) => res.json())
       .then((data) => setClientSay(data));
   }, []);
-  // 
+  console.log(reviews)
   return (
     <div
       className="py-20 bg-[#F7F2E2]"
@@ -109,5 +110,17 @@ function ClientSay() {
     </div>
   );
 }
+
+export async function getServerSideProps(ctx){
+const res = await fetch('http://localhost:3000/api/reviews')
+const data = await res.json();
+
+  return {
+    props:{
+      reviews:data
+    }
+  }
+}
+
 
 export default ClientSay;
