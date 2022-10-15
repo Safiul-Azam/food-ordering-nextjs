@@ -5,7 +5,6 @@ import ClientSay from "../components/Home/ClientSay";
 import HotDog from "../components/Home/HotDog";
 import JoinUs from "../components/Home/JoinUs";
 import Menus from "../components/Home/Menus";
-import PopularDishes from "../components/Home/PopularDishes";
 import Special from "../components/Home/Special";
 import TopRecipes from "../components/Home/TopRecipes";
 import styles from "../styles/Home.module.css";
@@ -26,7 +25,7 @@ export default function Home({foods,reviews}) {
       <DishesMenu foods={foods}/>
       <HotDog />
       <TopRecipes foods={foods}/>
-      <ClientSay reviews={reviews}/>
+      <ClientSay/>
       <BestBurger />
       <JoinUs />
     </div>
@@ -35,12 +34,12 @@ export default function Home({foods,reviews}) {
 
 export async function getServerSideProps(ctx){
   const foodsRes = await axios.get('http://localhost:3000/api/foods')
-  const reviewsRes = await axios.get('http://localhost:3000/api/reviews')
+  // const reviewsRes = await axios.get('http://localhost:3000/api/reviews')
 
   return {
     props:{
       foods:foodsRes.data,
-      reviews:reviewsRes.data
+      // reviews:reviewsRes.data
     }
   }
 }

@@ -5,14 +5,13 @@ import { BsFillChatQuoteFill } from "react-icons/bs";
 import { Autoplay } from "swiper";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-function ClientSay({reviews}) {
+function ClientSay() {
   const [clientSay, setClientSay] = useState([]);
   useEffect(() => {
-    fetch("api/clientSay/")
+    fetch("http://localhost:3000/api/reviews")
       .then((res) => res.json())
       .then((data) => setClientSay(data));
   }, []);
-  console.log(reviews)
   return (
     <div
       className="py-20 bg-[#F7F2E2]"
@@ -76,7 +75,7 @@ function ClientSay({reviews}) {
                         </div>
                         <div>
                           <h3 className="text-lg font-bold">
-                            {singleSay.name}
+                            {singleSay.client}
                           </h3>
                           <h3 className="text-gray-400 text-sm">
                             {singleSay.job}
@@ -98,7 +97,7 @@ function ClientSay({reviews}) {
                       </div>
                     </div>
                     <p className="text-base text-gray-500 tracking-normal">
-                      &quot;{singleSay.description}&quot;
+                      &quot;{singleSay.review}&quot;
                     </p>
                   </div>
                 </div>

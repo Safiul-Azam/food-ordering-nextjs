@@ -15,14 +15,14 @@ function about({ reviews }) {
     </div>
   );
 }
-export async function getServerSideProps(ctx) {
-  const res = await fetch("http://localhost:3000/api/reviews");
-  const data = await res.json();
+// export async function getServerSideProps(ctx) {
+//   const res = await fetch("http://localhost:3000/api/reviews");
+//   const data = await res.json();
 
-  return {
-    props: {
-      reviews: data,
-    },
-  };
-}
+//   return {
+//     props: {
+//       reviews: data,
+//     },
+//   };
+// }
 export default about;
