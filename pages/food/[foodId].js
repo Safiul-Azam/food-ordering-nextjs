@@ -5,24 +5,7 @@ import RelatedFood from "../../components/SingleFood/RelatedFood";
 import ScrollFoodView from "../../components/SingleFood/ScrollFoodView";
 
 function singleFood({ food }) {
-  console.log(food);
   const [scroll, setScroll] = useState(false);
-  // const food = {
-  //   id: 2,
-  //   role: "sale!",
-  //   title: "Apricot Chicken",
-  //   price: 18.33,
-  //   Ingredients:
-  //     "Dr. Praeger’s Black Bean Burger, Focaccia bun, Balsamic Vinaigrette, Pesto, Tomato, Swiss Cheese",
-  //   shortDescription:
-  //     "Crispy bacon, tasty ham, pineapple, onion and stretchy mozzarella, finished with a BBQ swirl.",
-  //   description:
-  //     "Although the legendary Double Burger really needs no introduction, please allow us… Tucked in between three soft buns are two all-beef patties, cheddar cheese, ketchup, onion, pickles and iceberg lettuce. Hesburger’s own paprika and cucumber mayonnaise add the crowning touch. Oh baby!",
-  //   category: "Pizza",
-  //   SKU: "n/a",
-  //   rating: 4.5,
-  //   img: "https://i.ibb.co/jLMvQFp/apricot.png",
-  // };
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
@@ -117,13 +100,13 @@ function singleFood({ food }) {
   );
 }
 export async function getServerSideProps({params}) {
-
   const res = await axios.get(`http://localhost:3000/api/foods/${params.foodId}`);
-
   return {
     props: {
       food: res.data,
     },
   };
 }
+
+
 export default singleFood;

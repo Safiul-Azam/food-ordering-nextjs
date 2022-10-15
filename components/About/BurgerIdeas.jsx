@@ -5,7 +5,7 @@ function BurgerIdeas() {
 
   return (
     <div
-      className="container mx-auto flex justify-between py-20"
+      className="container mx-auto flex justify-between py-20 space-x-16 items-center"
       style={{
         backgroundImage: "url(https://i.ibb.co/fpN6zyk/vector2-about.png)",
         backgroundPosition: "center",
@@ -13,11 +13,12 @@ function BurgerIdeas() {
         backgroundRepeat:'no-repeat'
       }}
     >
-      <div className='w-full'>
-        <h4 className="text-secondary text-xl font-bold">Welcome!</h4>
-        <h2 className="text-5xl text-black font-extrabold">Best burger ideas & traditions from the whole world</h2>
-        <p className="text-sm text-gray-500">Although the legendary Double Burger really needs no introduction, please allow us… Tucked in between three soft buns are two all-beef patties, cheddar cheese, ketchup, onion, pickles and iceberg lettuce. Hesburger’s own paprika and cucumber mayonnaise add the crowning touch. Oh baby!</p>
-        <button className="btn btn-secondary px-10 font-bold">ORDER NOW</button>
+      <div className='w-full space-y-6'>
+        <h4 className="text-secondary text-2xl font-bold">Welcome!</h4>
+        <h2 className="text-5xl text-[#1E1D23] font-extrabold">Best burger ideas & traditions from the whole world</h2>
+        <p className="text-gray-500">Although the legendary Double Burger really needs no introduction, please allow us… Tucked in between three soft buns are two all-beef patties, cheddar cheese, ketchup, onion, pickles and iceberg lettuce. Hesburger’s own paprika and cucumber mayonnaise add the crowning touch. Oh baby!</p>
+        <p className="text-gray-500">Mauris tempus erat laoreet turpis lobortis, eu tincidunt erat fermentum. Aliquam non tincidunt urna. Integer tincidunt nec nisl vitae ullamcorper. Proin sed ultrices erat.</p>
+        <button className="btn btn-secondary px-10 font-bold">CONTACT NOW</button>
       </div>
       <div className='grid grid-cols-3 w-full'>
         <img className='' src='https://i.ibb.co/Z86cJWL/image1-h4.jpg' alt="" />

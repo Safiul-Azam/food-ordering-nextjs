@@ -7,7 +7,7 @@ import { FaHeart } from "react-icons/fa";
 function RelatedFood() {
   const [foods, setFoods] = useState([]);
   useEffect(() => {
-    fetch("/api/foods")
+    fetch("http://localhost:3000/api/foods")
       .then((res) => res.json())
       .then((data) => setFoods(data));
   }, []);
