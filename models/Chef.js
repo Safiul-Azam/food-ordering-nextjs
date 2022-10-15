@@ -2,42 +2,41 @@ import mongoose from "mongoose";
 
 const chefsSchema = new mongoose.Schema(
   {
-    title: {
+    chefName: {
       type: String,
       require: true,
     },
-    description: {
+    position: {
       type: String,
       require: true,
     },
-    shortDescription: {
+    role: {
       type: String,
       require: true,
     },
-    Ingredients: {
+    email: {
       type: String,
       require: true,
     },
-    category: {
+    instagram: {
       type: String,
       require: true,
     },
-    rating: {
-      type: Number,
-      max: 5,
-    },
-    SKU: {
+    facebook: {
       type: String,
+      require: true,
     },
-    role:{
-      type:String,
+    pinterest: {
+      type: String,
+      require: true,
     },
+    twitter: {
+      type: String,
+      require: true,
+    },
+    
     img: {
       type: String,
-      require: true,
-    },
-    price: {
-      type: Number,
       require: true,
     },
   },

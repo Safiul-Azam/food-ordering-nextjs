@@ -2,7 +2,7 @@
   {
     "id": 1,
     "role": "chef",
-    "teamMember": "Valentina Karla",
+    "chefName": "Valentina Karla",
     "position": "General Manager",
     "email": "valentina@hotel.com",
     "instagram": "https://www.linkedin.com/in/safiul-azam-b2a44a212/",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "role": "manager",
-    "teamMember": "Micheal White",
+    "chefName": "Micheal White",
     "position": "Guest Service Department",
     "email": "micheal@hotel.com",
     "instagram": "https://www.linkedin.com/in/safiul-azam-b2a44a212/",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "role": "chef",
-    "teamMember": "Olivia Martin",
+    "chefName": "Olivia Martin",
     "position": "Reservations Manager",
     "email": "olivia@hotel.com",
     "instagram": "https://www.linkedin.com/in/safiul-azam-b2a44a212/",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "role": "manager",
-    "teamMember": "Mariana Dana",
+    "chefName": "Mariana Dana",
     "position": "F&B Manager",
     "email": "mariana@hotel.com",
     "instagram": "https://www.linkedin.com/in/safiul-azam-b2a44a212/",
@@ -50,7 +50,7 @@
   {
     "id": 5,
     "role": "chef",
-    "teamMember": "Enrico Brown",
+    "chefName": "Enrico Brown",
     "position": "Head Chef",
     "email": "enrico@hotel.com",
     "instagram": "https://www.linkedin.com/in/safiul-azam-b2a44a212/",
@@ -62,7 +62,7 @@
   {
     "id": 6,
     "role": "chef",
-    "teamMember": "Victoria Dan",
+    "chefName": "Victoria Dan",
     "position": "Meetings and Events Manager",
     "email": "victoria@hotel.com",
     "instagram": "https://www.linkedin.com/in/safiul-azam-b2a44a212/",
