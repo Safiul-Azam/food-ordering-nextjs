@@ -12,7 +12,7 @@ import styles from "../styles/Home.module.css";
 import DishesMenu from '../components/Home/DishesMenu'
 import axios from "axios";
 
-export default function Home({foods}) {
+export default function Home({foods,reviews}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -26,7 +26,7 @@ export default function Home({foods}) {
       <DishesMenu foods={foods}/>
       <HotDog />
       <TopRecipes foods={foods}/>
-      <ClientSay/>
+      <ClientSay reviews={reviews}/>
       <BestBurger />
       <JoinUs />
     </div>
@@ -34,11 +34,13 @@ export default function Home({foods}) {
 }
 
 export async function getServerSideProps(ctx){
-  const res = await axios.get('http://localhost:3000/api/foods')
+  const foodsRes = await axios.get('http://localhost:3000/api/foods')
+  const reviewsRes = await axios.get('http://localhost:3000/api/reviews')
 
   return {
     props:{
-      foods:res.data
+      foods:foodsRes.data,
+      reviews:reviewsRes.data
     }
   }
 }

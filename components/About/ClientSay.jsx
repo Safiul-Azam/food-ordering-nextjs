@@ -1,4 +1,5 @@
-function ClientSay() {
+function ClientSay({reviews}) {
+  console.log(reviews);
   return (
     <div
       className="container mx-auto flex justify-between py-20 space-x-16 items-center"
