@@ -8,7 +8,7 @@ function Banner() {
         backgroundSize: "cover",
       }}
     >
-      <h2 className="text-5xl font-extrabold text-center">Menu Restaurant</h2>
+      <h2 className="text-5xl font-extrabold text-center">Shop</h2>
       <div className="breadcrumbs flex justify-center mt-4">
         <ul>
           <li>

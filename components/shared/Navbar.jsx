@@ -36,6 +36,11 @@ function Navbar() {
         </Link>
       </li>
       <li>
+        <Link href="/shop">
+          <a>Shop</a>
+        </Link>
+      </li>
+      <li>
         <Link href="/">
           <a>Blog</a>
         </Link>
