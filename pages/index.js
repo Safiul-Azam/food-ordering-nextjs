@@ -2,7 +2,7 @@ import Head from "next/head";
 import Banner from "../components/Home/Banner";
 import BestBurger from "../components/Home/BestBurger";
 import ClientSay from "../components/Home/ClientSay";
-import HotDog from "../components/Home/HotDog";
+import TastyFood from "../components/Home/TastyFood";
 import JoinUs from "../components/Home/JoinUs";
 import Menus from "../components/Home/Menus";
 import Special from "../components/Home/Special";
@@ -23,7 +23,7 @@ export default function Home({foods,reviews}) {
       <Menus />
       <Special />
       <DishesMenu foods={foods}/>
-      <HotDog />
+      <TastyFood />
       <TopRecipes foods={foods}/>
       <ClientSay/>
       <BestBurger />

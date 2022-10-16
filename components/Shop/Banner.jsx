@@ -15,7 +15,7 @@ function Banner() {
             <p className="text-gray-400">Home</p>
           </li>
           <li>
-            <p>Menu Restaurant</p>
+            <p>Shop</p>
           </li>
         </ul>
       </div>
