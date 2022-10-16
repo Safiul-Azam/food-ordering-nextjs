@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MenuItems from "./MenuItems";
 // import PopularDishes from "./PopularDishes";
 
 function DishesMenu({ foods }) {
@@ -45,6 +46,7 @@ function DishesMenu({ foods }) {
           ))}
         </div>
       </div>
+      <MenuItems filterByBtn={filterByBtn} foods={foods}/>
       {/* <PopularDishes filterByBtn={filterByBtn} foods={foods} /> */}
     </>
   );
