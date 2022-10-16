@@ -24,21 +24,45 @@ function NewTaste() {
         </div>
       </div>
       <div
-        className="text-white w-full bg-[rgba(247,244,239,0.76)]"
+        className="text-white w-full flex justify-center items-center"
         style={{
           background:
-            "linear-gradient(rgba(247,244,239,0.4),rgba(247,244,239,0.4)),url(https://i.ibb.co/j3PrQs8/menu-banner-2-h4.png)",
+            "linear-gradient(rgba(247,242,226,0.57),rgba(247,242,226,0.57)),url(https://i.ibb.co/j3PrQs8/menu-banner-2-h4.png)",
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}
       >
-        <div className="w-2/3 mx-auto px-4">
+        <div className="w-2/3 mx-auto px-4 space-y-7">
           <div className="">
             <div className="flex justify-between items-center">
-              <h2 className="text-black text-lg font-bold">Pizza Hut</h2>
+              <h2 className="text-[#1E1D23] text-xl font-extrabold">Pizza Hut</h2>
               <h2 className="text-secondary text-lg font-bold">$4.95</h2>
             </div>
-            <hr className="border-dashed border-[#666]" />
+            <hr className="border-dashed border-gray-300 my-1" />
+            <p className="text-[#666]">Shrimp, Squid, Pineapple</p>
+          </div>
+          <div className="">
+            <div className="flex justify-between items-center">
+              <h2 className="text-[#1E1D23] text-xl font-extrabold">Pepperoni Pizza</h2>
+              <h2 className="text-secondary text-lg font-bold">$5.95</h2>
+            </div>
+            <hr className="border-dashed border-gray-300 my-1" />
+            <p className="text-[#666]">Shrimp, Squid, Pineapple</p>
+          </div>
+          <div className="">
+            <div className="flex justify-between items-center">
+              <h2 className="text-[#1E1D23] text-xl font-extrabold">Apricot Chicken</h2>
+              <h2 className="text-secondary text-lg font-bold">$5.65</h2>
+            </div>
+            <hr className="border-dashed border-gray-300 my-1" />
+            <p className="text-[#666]">Shrimp, Squid, Pineapple</p>
+          </div>
+          <div className="">
+            <div className="flex justify-between items-center">
+              <h2 className="text-[#1E1D23] text-xl font-extrabold">Summer Pizza</h2>
+              <h2 className="text-secondary text-lg font-bold">$8.95</h2>
+            </div>
+            <hr className="border-dashed border-gray-300 my-1" />
             <p className="text-[#666]">Shrimp, Squid, Pineapple</p>
           </div>
         </div>
