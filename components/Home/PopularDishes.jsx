@@ -6,7 +6,7 @@ import { FaHeart } from "react-icons/fa";
 function PopularDishes({ filterByBtn, foods }) {
   return (
     <>
-      <div className="container mx-auto grid grid-cols-4 gap-8 mb-10">
+      <div className="container mx-auto grid grid-cols-4 gap-5 mb-10">
         {filterByBtn?.length > 0
           ? filterByBtn.map((food) => {
               return (
