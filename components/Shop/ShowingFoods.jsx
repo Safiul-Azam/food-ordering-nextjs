@@ -6,12 +6,13 @@ import { FaHeart } from "react-icons/fa";
 function ShowingFoods({ filterByBtn, foods }) {
   return (
     <>
-      <div className="container mx-auto grid grid-cols-3 gap-5 mb-10">
+    <h2>hh</h2>
+      <div className=" py-12 container mx-auto grid grid-cols-3 gap-5 mb-10">
         {filterByBtn?.length > 0
           ? filterByBtn.map((food) => {
               return (
                 <div key={food._id} className="rounded-3xl border">
-                  <div className="m-2 mb-0 px-3 pt-3 pb-7 rounded-3xl hover:bg-[#F7F2E2] hover:duration-500 hover:ease-in-out ease-in-out duration-500 ">
+                  <div className="m-2 mb-0 px-3 pt-3 pb-4 rounded-3xl hover:bg-[#F7F2E2] hover:duration-500 hover:ease-in-out ease-in-out duration-500 ">
                     <div className="flex justify-between">
                       <h3
                         className={`${
@@ -32,9 +33,9 @@ function ShowingFoods({ filterByBtn, foods }) {
                       />
                     </figure>
                   </div>
-                  <div className="p-5">
+                  <div className="p-4">
                     <Link href={`/food/${food._id}`}>
-                      <h2 className="text-lg font-bold text-black py-2 hover:text-secondary cursor-pointer hover:duration-300 hover:ease-in-out ease-in-out duration-300">
+                      <h2 className="text-lg font-bold text-black py-1 hover:text-secondary cursor-pointer hover:duration-300 hover:ease-in-out ease-in-out duration-300">
                         {food.title}
                       </h2>
                     </Link>
@@ -57,7 +58,7 @@ function ShowingFoods({ filterByBtn, foods }) {
           : foods?.slice(0, 9).map((food) => {
               return (
                 <div key={food._id} className="rounded-3xl border">
-                  <div className="m-2 mb-0 px-3 pt-3 pb-7 rounded-3xl hover:bg-[#F7F2E2] hover:duration-500 hover:ease-in-out ease-in-out duration-500 ">
+                  <div className="m-2 mb-0 px-3 pt-3 pb-4 rounded-3xl hover:bg-[#F7F2E2] hover:duration-500 hover:ease-in-out ease-in-out duration-500 ">
                     <div className="flex justify-between">
                       <h3
                         className={`${
@@ -78,7 +79,7 @@ function ShowingFoods({ filterByBtn, foods }) {
                       />
                     </figure>
                   </div>
-                  <div className="p-5">
+                  <div className="p-4">
                     <Link href={`/food/${food._id}`}>
                       <h2 className="text-lg font-bold text-black py-2 hover:text-secondary cursor-pointer hover:duration-300 hover:ease-in-out ease-in-out duration-300">
                         {food.title}
