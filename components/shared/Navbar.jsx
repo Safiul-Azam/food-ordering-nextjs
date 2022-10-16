@@ -88,9 +88,9 @@ function Navbar() {
               </div>
               <div className="border p-3 flex justify-center items-center rounded-full">
                 <div className="indicator">
-                  <BsFillSuitHeartFill className="text-2xl cursor-pointer" />
-                  <span className="badge badge-xs py-2 indicator-item badge-secondary">
-                    12
+                  <BsFillSuitHeartFill className="text-xl cursor-pointer" />
+                  <span className="badge badge-sm indicator-item badge-secondary">
+                    6
                   </span>
                 </div>
               </div>

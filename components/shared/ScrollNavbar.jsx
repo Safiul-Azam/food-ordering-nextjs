@@ -1,5 +1,4 @@
-import { FcLikePlaceholder } from "react-icons/fc";
-import { BsSearch } from "react-icons/bs";
+import { BsFillSuitHeartFill, BsSearch } from "react-icons/bs";
 import { MdOutlineDeliveryDining } from "react-icons/md";
 import { GiShoppingCart } from "react-icons/gi";
 import logo from "../../images/icon/logo.png";
@@ -68,9 +67,14 @@ function ScrollNavbar() {
           <div className="border rounded-full p-3">
             <BsSearch className="text-xl" />
           </div>
-          <div className="border rounded-full p-3">
-            <FcLikePlaceholder className="text-xl" />
-          </div>
+          <div className="border p-3 flex justify-center items-center rounded-full">
+                <div className="indicator">
+                  <BsFillSuitHeartFill className="text-xl cursor-pointer" />
+                  <span className="badge badge-sm indicator-item badge-secondary">
+                    2
+                  </span>
+                </div>
+              </div>
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <div className="indicator">

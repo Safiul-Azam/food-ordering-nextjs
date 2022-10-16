@@ -1,13 +1,36 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BsBasket2Fill } from "react-icons/bs";
-import { FaHeart } from "react-icons/fa";
+import { FaHeart, FaThList } from "react-icons/fa";
+import { IoGridSharp } from "react-icons/io5";
 
 function ShowingFoods({ filterByBtn, foods }) {
+
+  const handleChange = () => {}
   return (
     <>
-    <h2>hh</h2>
-      <div className=" py-12 container mx-auto grid grid-cols-3 gap-5 mb-10">
+      <div className="flex justify-between items-center rounded-lg">
+        <p className="text-sm text-[#999999]">
+          Showing 1 - {foods.length} of 54 results
+        </p>
+        <div className="flex items-center space-x-4">
+          <IoGridSharp className="text-xs text-black"/>
+          <FaThList className="text-xs text-[#999999]"/>
+          <select
+            onChange={handleChange}
+            className="py-4 px-2 bg-[#FBF7E8]"
+            id="adult"
+          >
+            <option>Default Sorting</option>
+            <option>Sort by popularity</option>
+            <option>Sort by average rating</option>
+            <option>Sort by latest</option>
+            <option>Sort by price: low to high</option>
+            <option>Sort by price: high to low</option>
+          </select>
+        </div>
+      </div>
+      <div className=" py-8 container mx-auto grid grid-cols-3 gap-5 mb-10">
         {filterByBtn?.length > 0
           ? filterByBtn.map((food) => {
               return (
