@@ -41,7 +41,7 @@ function ScrollNavbar() {
     </ul>
   );
   return (
-    <div className="w-full bg-base-100 fixed mx-auto z-10 shadow-lg ">
+    <div className="w-full bg-base-100 fixed mx-auto z-10 shadow-sm">
       <div className="navbar container mx-auto flex justify-between">
         <div className="space-x-6">
           <a className="text-primary font-extrabold text-3xl flex items-center">

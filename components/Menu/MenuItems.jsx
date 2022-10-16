@@ -30,7 +30,7 @@ function MenuItems({ foods, filterByBtn }) {
                   </div>
                 );
               })
-            : foods?.slice(0, 8).map((food) => {
+            : foods?.slice(0, 6).map((food) => {
                 return (
                   <div key={food._id} className="border rounded-3xl p-2">
                     <div className="flex justify-between items-center rounded-2xl bg-[#F7F2E2] p-5">

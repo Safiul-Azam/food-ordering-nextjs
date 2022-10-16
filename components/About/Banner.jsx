@@ -1,7 +1,7 @@
 function Banner() {
   return (
     <div
-    className="py-24"
+    className="py-16"
       style={{
         backgroundImage: "url(https://i.ibb.co/6FXVm0S/about-Banner-1.jpg)",
         backgroundPosition: "top",
