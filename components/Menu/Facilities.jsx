@@ -4,7 +4,7 @@ import { GiAlarmClock } from 'react-icons/gi';
 import { MdOutlineDeliveryDining } from "react-icons/md";
 function Facilities() {
   return (
-    <div className='flex justify-between container mx-auto space-x-6 pb-20'>
+    <div className='flex justify-between container mx-auto space-x-6 py-20'>
       <div className='w-full flex items-center space-x-6 border-dashed border-2 rounded-xl p-5 hover:border-secondary'>
         <MdOutlineDeliveryDining className='text-6xl text-secondary '/>
         <div className='w-3/4 space-y-2'>
