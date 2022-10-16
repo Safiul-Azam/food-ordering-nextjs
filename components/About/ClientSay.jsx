@@ -22,7 +22,7 @@ function ClientSay() {
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="w-3/4 mx-auto px-10 py-20">
+      <div className="container mx-auto px-10 py-20">
         <Swiper
           spaceBetween={30}
           pagination={{
@@ -40,11 +40,11 @@ function ClientSay() {
         >
           {clientSay.map((singleSay) => (
             <SwiperSlide key={singleSay._id}>
-              <div className="card-body mb-6">
+              <div className="card-body mb-6 w-3/4 mx-auto">
                 <div className="flex justify-center items-center flex-col space-y-7">
                   <div className="indicator">
                     <div className="indicator-item indicator-bottom">
-                      <BsChatQuoteFill className="text-4xl text-primary  -mt-10 -ml-2" />
+                      <BsChatQuoteFill className="text-3xl text-primary  -mt-10 -ml-2" />
                     </div>
                     <div className="avatar">
                       <div className="w-32 rounded-full border">

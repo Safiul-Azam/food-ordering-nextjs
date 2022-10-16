@@ -63,10 +63,10 @@ const TalentedChefs = () => {
                 </p>
                 </div>
                 <div className="bg-white mx-auto text-center py-8 relative">
-                  <h2 className="uppercase text-lg mb-3">
-                    {meetTeam.teamMember}
+                  <h2 className="uppercase text-lg font-bold text-black mb-3">
+                    {meetTeam.chefName}
                   </h2>
-                  <p className="text-lg text-[#666] leading-none">
+                  <p className="text-[#666] leading-none">
                     {meetTeam.position}
                   </p>
 
