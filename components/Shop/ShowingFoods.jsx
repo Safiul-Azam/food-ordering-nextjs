@@ -32,7 +32,7 @@ function ShowingFoods({ filterByBtn, foods }) {
       </div>
       <div className=" py-8 container mx-auto grid grid-cols-3 gap-5 mb-10">
         {filterByBtn?.length > 0
-          ? filterByBtn.map((food) => {
+          ? filterByBtn.slice(0,6).map((food) => {
               return (
                 <div key={food._id} className="rounded-3xl border">
                   <div className="m-2 mb-0 px-3 pt-3 pb-4 rounded-3xl hover:bg-[#F7F2E2] hover:duration-500 hover:ease-in-out ease-in-out duration-500 ">
@@ -78,7 +78,7 @@ function ShowingFoods({ filterByBtn, foods }) {
                 </div>
               );
             })
-          : foods?.slice(0, 9).map((food) => {
+          : foods?.slice(0, 6).map((food) => {
               return (
                 <div key={food._id} className="rounded-3xl border">
                   <div className="m-2 mb-0 px-3 pt-3 pb-4 rounded-3xl hover:bg-[#F7F2E2] hover:duration-500 hover:ease-in-out ease-in-out duration-500 ">

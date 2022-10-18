@@ -3,7 +3,7 @@ import { FaHamburger } from "react-icons/fa";
 import { BiDrink } from "react-icons/bi";
 import ShowingFoods from "./ShowingFoods";
 import { GiCoffeeCup, GiFullPizza, GiWrappedSweet } from "react-icons/gi";
-import { BsReplyAll } from "react-icons/bs";
+import { BsReplyAll, BsSearch } from "react-icons/bs";
 
 function DishesMenu({ foods }) {
   const [filterByBtn, setFilterByBtn] = useState([]);
@@ -26,7 +26,7 @@ function DishesMenu({ foods }) {
     setActive(btn);
   };
   return (
-    <div className="container mx-auto grid grid-cols-4 gap-5 py-16">
+    <div className="container mx-auto grid grid-cols-4 gap-5 pt-16">
       <div className="col-span-3">
         <ShowingFoods filterByBtn={filterByBtn} foods={foods} />
       </div>
@@ -47,7 +47,6 @@ function DishesMenu({ foods }) {
                     className="text-lg capitalize cursor-pointer"
                     onClick={() => handleClick(btn.name)}
                   >
-                    
                     {btn.name}
                   </p>
                 </div>
@@ -56,6 +55,11 @@ function DishesMenu({ foods }) {
             ))}
           </div>
         </div>
+        <input
+          type="text"
+          placeholder="Search Foods"
+          className="input py-7 w-full max-w-xs bg-[#FBF7E8] mt-8"
+        />
       </div>
     </div>
   );
