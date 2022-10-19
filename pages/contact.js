@@ -1,9 +1,11 @@
-import Address from "../components/Contact/Address";
+import ForVisit from "../components/Contact/ForVisit";
+import Banner from "../components/Contact/Banner";
 
 function contact() {
     return (
         <div>
-            <Address/>
+            <Banner/>
+            <ForVisit/>
         </div>
     );
 }
