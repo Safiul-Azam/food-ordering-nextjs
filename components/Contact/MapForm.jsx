@@ -7,22 +7,24 @@ function MapForm() {
   } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
-    <div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d387521.0648249189!2d-73.928554!3d40.640724!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1666245358517!5m2!1sen!2sus"
-        width="600"
-        height="450"
-        style={{ border: 0 }}
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-      <div className="w-full">
+    <div className="flex justify-between items-center space-x-7 my-20 container mx-auto border">
+      <div className="w-1/2">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d387521.0648249189!2d-73.928554!3d40.640724!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1666245358517!5m2!1sen!2sus"
+          width="600"
+          height="450"
+          style={{ border: 0 }}
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div className="w-full px-10">
         <h2 className="text-2xl text-center text-black mt-10">
           Send us a message
         </h2>
-        <hr className="w-3/4 lg:w-1/2 border-primary mx-auto mt-4 mb-10" />
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <hr className="w-3/4 lg:w-1/2 border-secondary mx-auto mt-4 mb-10" />
+        <form onSubmit={handleSubmit(onSubmit)} className="">
           <div className="lg:flex lg:space-x-4">
             <div className="form-control w-full">
               <input
@@ -34,7 +36,7 @@ function MapForm() {
                 })}
                 type="text"
                 placeholder="Your Name"
-                className="input border-b-gray-300 outline-0 focus:outline-none focus:border-b-primary text-lg border-x-0 border-t-0 w-full rounded-none"
+                className="input border-b-gray-300 outline-0 focus:outline-none focus:border-b-secondary text-lg border-x-0 border-t-0 w-full rounded-none"
               />
               <label className="label">
                 {errors.name?.type === "required" && (
@@ -58,7 +60,7 @@ function MapForm() {
                 })}
                 type="email"
                 placeholder="Enter Your Email"
-                className="input border-b-gray-300 outline-0 focus:outline-none focus:border-b-primary text-lg border-x-0 border-t-0 w-full rounded-none"
+                className="input border-b-gray-300 outline-0 focus:outline-none focus:border-b-secondary text-lg border-x-0 border-t-0 w-full rounded-none"
               />
               <label className="label">
                 {errors.email?.type === "required" && (
@@ -85,7 +87,7 @@ function MapForm() {
                 })}
                 type="number"
                 placeholder="Your number"
-                className="input border-b-gray-300 outline-0 focus:outline-none focus:border-b-primary text-lg border-x-0 border-t-0 w-full rounded-none"
+                className="input border-b-gray-300 outline-0 focus:outline-none focus:border-b-secondary text-lg border-x-0 border-t-0 w-full rounded-none"
               />
               <label className="label">
                 {errors.number?.type === "required" && (
@@ -105,7 +107,7 @@ function MapForm() {
                 })}
                 type="text"
                 placeholder="Enter Your subject"
-                className="input border-b-gray-300 outline-0 focus:outline-none focus:border-b-primary text-lg border-x-0 border-t-0 w-full rounded-none"
+                className="input border-b-gray-300 outline-0 focus:outline-none focus:border-b-secondary text-lg border-x-0 border-t-0 w-full rounded-none"
               />
               <label className="label">
                 {errors.subject?.type === "required" && (
@@ -126,7 +128,7 @@ function MapForm() {
               })}
               type="text"
               placeholder="message"
-              className="textarea border-b-gray-300 outline-0 focus:outline-none focus:border-b-primary text-lg border-x-0 border-t-0 w-full rounded-none"
+              className="textarea border-b-gray-300 outline-0 focus:outline-none focus:border-b-secondary text-lg border-x-0 border-t-0 w-full rounded-none"
               rows="3"
             ></textarea>
             <label className="label">
@@ -139,7 +141,7 @@ function MapForm() {
           </div>
 
           <input
-            className="py-3 w-1/2 mx-auto mt-4 bg-primary hover:bg-[#222222] rounded-none text-white tracking-widest hover:duration-500 hover:ease-in-out ease-in-out duration-500"
+            className="py-3 w-1/2 mx-auto mt-4 bg-secondary hover:bg-[#222222] rounded-none text-white tracking-widest hover:duration-500 hover:ease-in-out ease-in-out duration-500"
             type="submit"
             value="SEND MESSAGE"
           />
