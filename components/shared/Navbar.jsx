@@ -41,12 +41,12 @@ function Navbar() {
         </Link>
       </li>
       <li>
-        <Link href="/blog">
+        <Link href="/">
           <a>Blog</a>
         </Link>
       </li>
       <li>
-        <Link href="/pages">
+        <Link href="/">
           <a>Page</a>
         </Link>
       </li>
