@@ -3,7 +3,7 @@ import {RiMapPinAddLine} from 'react-icons/ri'
 import {HiOutlineMail} from 'react-icons/hi'
 function ContactInfo() {
     return (
-        <div className='grid grid-cols-3 py-16 text-gray-500'>
+        <div className='grid grid-cols-3 py-16 text-gray-500 container mx-auto'>
             <div className=''>
                 <BsPhone className="text-secondary text-5xl"/>
                 <h3 className='text-2xl text-black font-bold mt-8 mb-5'>Phone:</h3>

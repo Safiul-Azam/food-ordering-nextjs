@@ -12,7 +12,7 @@ function MapForm() {
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d387521.0648249189!2d-73.928554!3d40.640724!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1666245358517!5m2!1sen!2sus"
           width="600"
-          height="450"
+          height="500"
           style={{ border: 0 }}
           allowfullscreen=""
           loading="lazy"
@@ -141,7 +141,7 @@ function MapForm() {
           </div>
 
           <input
-            className="py-3 w-1/2 mx-auto mt-4 bg-secondary hover:bg-[#222222] rounded-none text-white tracking-widest hover:duration-500 hover:ease-in-out ease-in-out duration-500"
+            className="py-3 w-1/2 mx-auto mt-1 bg-secondary hover:bg-[#222222] rounded-none text-white tracking-widest hover:duration-500 hover:ease-in-out ease-in-out duration-500"
             type="submit"
             value="SEND MESSAGE"
           />
