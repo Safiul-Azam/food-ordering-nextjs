@@ -13,8 +13,8 @@ function ContactInfo() {
             <div>
                 <RiMapPinAddLine className="text-secondary text-5xl"/>
                 <h3 className='text-2xl text-black font-bold mt-8 mb-5'>Address</h3>
-                <p>Box 565, Pinney &apos;s Beach, Charlestown</p>
-                <p>Nevis, West Indies, Caribbean</p>
+                <p>Box 565, Pinney &apos;s Beach, Charlestown.</p>
+                <p>Nevis, West Indies, Caribbean.</p>
             </div>
             <div>
                 <HiOutlineMail className="text-secondary text-5xl"/>
