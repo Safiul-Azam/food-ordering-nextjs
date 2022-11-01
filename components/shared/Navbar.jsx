@@ -97,10 +97,9 @@ function Navbar() {
                   </span>
                 </div>
               </div>
-              <Link href={'/cart'}>
-                <div className="dropdown dropdown-end">
+              <Link className="" href={'/cart'}>
+                <div className={`${quantity === 0 && 'pointer-events-none'}`}>
                   <label
-                    tabIndex={0}
                     className="cursor-pointer border p-3 flex justify-center items-center rounded-full"
                   >
                     <div className="indicator">
@@ -110,20 +109,6 @@ function Navbar() {
                       </span>
                     </div>
                   </label>
-                  {/* <div
-                  tabIndex={0}
-                  className="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow"
-                >
-                  <div className="card-body">
-                    <span className="font-bold text-lg">8 Items</span>
-                    <span className="text-info">Subtotal: $999</span>
-                    <div className="card-actions">
-                      <button className="btn btn-primary btn-block">
-                        View cart
-                      </button>
-                    </div>
-                  </div>
-                </div> */}
                 </div>
               </Link>
               <div className="dropdown dropdown-end">

@@ -12,7 +12,7 @@ const Cart = () => {
   return (
     <div className="grid grid-cols-3">
       <div className="col-span-2">
-        {cart.foods.length <= 0 ? <h3 className="text-secondary text-center mt-20 text-2xl">Please go to our shop page</h3> :<table className="table w-full">
+        {cart.foods.length <= 0 ? <Link className="" href='/shop'><h3 className="text-secondary hover:underline cursor-pointer text-center mt-20">Please go to our shop page</h3></Link> :<table className="table w-full">
           <thead>
             <tr>
               <th>id</th>
