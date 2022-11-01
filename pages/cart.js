@@ -8,11 +8,12 @@ import { useSelector } from "react-redux";
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
   console.log(cart);
+  const food = cart.foods.map((food) => food);
   return (
     <div className="grid grid-cols-3">
       <div className="col-span-2">
-        <table className="table w-full">
-          <thead className="">
+        {cart.foods.length <= 0 ? <h3 className="text-secondary text-center mt-20 text-2xl">Please go to our shop page</h3> :<table className="table w-full">
+          <thead>
             <tr>
               <th>id</th>
               <th>Food</th>
@@ -49,22 +50,35 @@ const Cart = () => {
               </tr>
             ))}
           </tbody>
-        </table>
+        </table>}
       </div>
-      <div className="text-red-500">
-        <div className="text-red-500">
-          <h2 className="text-red-500">CART TOTAL</h2>
-          <div className="text-red-500">
-            <p className="text-red-500">Subtotal:</p>$79.60
-          </div>
-          <div className="text-red-500">
-            <p className="text-red-500">Discount:</p>$0.00
-          </div>
-          <div className="text-red-500">
-            <p className="text-red-500">Total:</p>$79.60
-          </div>
-          <button className="text-red-500">CHECKOUT NOW!</button>
+      <div className=" py-16 px-10 border space-y-2">
+        <h2 className="text-xl text-center mb-10">Your Cart</h2>
+        
+        <div>
+          {cart?.foods?.length === 0 ? <h3 className="text-center text-red-300 my-8">No food has been Selected yet!</h3> :cart?.foods.map((food) => (
+            <div key={food._id} className="flex justify-between">
+              <h2 className="text-sm text-primary">{food.title}</h2>
+              <h2>
+                ${parseInt(food.price)} x {food.quantity} = 
+                 ${parseInt(food.price) * food.quantity}
+              </h2>
+            </div>
+          ))}
         </div>
+        <hr />
+        <div className="flex justify-between">
+          <p className="">Subtotal:</p>${parseInt(cart.total)}
+        </div>
+        <div className="flex justify-between">
+          <p className="">Discount:</p>$00
+        </div>
+        <div className="flex justify-between">
+          <b className="mb-12">Total(incl.VAT):</b>${parseInt(cart.total)}
+        </div>
+        <button className="btn-secondary btn text-black font-bold w-full">
+          Check out now
+        </button>
       </div>
     </div>
   );

@@ -97,7 +97,7 @@ function Navbar() {
                   </span>
                 </div>
               </div>
-              <Link href='/cart'>
+              <Link href={'/cart'}>
                 <div className="dropdown dropdown-end">
                   <label
                     tabIndex={0}
