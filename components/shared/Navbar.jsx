@@ -7,8 +7,11 @@ import logo from "../../images/icon/logo.png";
 import Image from "next/image";
 import ScrollNavbar from "./ScrollNavbar";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 function Navbar() {
   const [scroll, setScroll] = useState(false);
+  const quantity = useSelector(state => state.cart.quantity)
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
@@ -41,12 +44,12 @@ function Navbar() {
         </Link>
       </li>
       <li>
-        <Link href="/blog">
+        <Link href="/">
           <a>Blog</a>
         </Link>
       </li>
       <li>
-        <Link href="/blog">
+        <Link href="/">
           <a>Page</a>
         </Link>
       </li>
@@ -66,7 +69,7 @@ function Navbar() {
           <div className="navbar container mx-auto flex justify-between">
             <div className="space-x-6">
               <Link href="/">
-                <h4 className="text-primary font-extrabold text-3xl flex items-center cursor-pointer">
+                <h4 className="text-primary font-extrabold text-3xl flex items-center cursor-pointer hover:primary">
                   <Image src={logo} alt="" />
                   Safi <span className="text-secondary">Food!</span>
                 </h4>
@@ -99,7 +102,7 @@ function Navbar() {
                   <div className="indicator">
                     <GiShoppingCart className="text-2xl" />
                     <span className="badge badge-sm indicator-item badge-secondary">
-                      8
+                      {quantity}
                     </span>
                   </div>
                 </label>
