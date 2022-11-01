@@ -1,5 +1,14 @@
 import Image from "next/image";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addFood } from "../../redux/cartSlice";
 function ScrollFoodView({ food }) {
+  const dispatch = useDispatch();
+  const [price, setPrice] = useState(food.price);
+  const [quantity, setQuantity] = useState(1);
+  const handleClick = () => {
+    dispatch(addFood({ ...food, price,quantity }));
+  };
   return (
     <div className="w-full p-2 bg-[#F7F2E2] fixed bottom-0 mx-auto z-10 drop-shadow-xl ">
       <div className="flex justify-between items-center container mx-auto">
@@ -13,7 +22,7 @@ function ScrollFoodView({ food }) {
           </div>
         </div>
         <div>
-          <button className="btn-secondary btn text-black font-bold">
+          <button onClick={handleClick} className="btn-secondary btn text-black font-bold">
             ADD TO CART
           </button>
         </div>

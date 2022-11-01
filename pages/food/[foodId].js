@@ -7,11 +7,10 @@ import ScrollFoodView from "../../components/SingleFood/ScrollFoodView";
 import { addFood } from "../../redux/cartSlice";
 
 function singleFood({ food }) {
-  console.log(food);
   const [scroll, setScroll] = useState(false);
   const dispatch = useDispatch();
   const [price, setPrice] = useState(food.price);
-  const [quantity, setQuantity] = useState(3);
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
