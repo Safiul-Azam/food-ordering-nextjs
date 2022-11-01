@@ -10,7 +10,7 @@ import Link from "next/link";
 import { useSelector } from "react-redux";
 function Navbar() {
   const [scroll, setScroll] = useState(false);
-  const quantity = useSelector(state => state.cart.quantity)
+  const quantity = useSelector((state) => state.cart.quantity);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -97,16 +97,20 @@ function Navbar() {
                   </span>
                 </div>
               </div>
-              <div className="dropdown dropdown-end">
-                <label tabIndex={0} className="cursor-pointer border p-3 flex justify-center items-center rounded-full">
-                  <div className="indicator">
-                    <GiShoppingCart className="text-2xl" />
-                    <span className="badge badge-sm indicator-item badge-secondary">
-                      {quantity}
-                    </span>
-                  </div>
-                </label>
-                <div
+              <Link href='/cart'>
+                <div className="dropdown dropdown-end">
+                  <label
+                    tabIndex={0}
+                    className="cursor-pointer border p-3 flex justify-center items-center rounded-full"
+                  >
+                    <div className="indicator">
+                      <GiShoppingCart className="text-2xl" />
+                      <span className="badge badge-sm indicator-item badge-secondary">
+                        {quantity}
+                      </span>
+                    </div>
+                  </label>
+                  {/* <div
                   tabIndex={0}
                   className="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow"
                 >
@@ -119,8 +123,9 @@ function Navbar() {
                       </button>
                     </div>
                   </div>
+                </div> */}
                 </div>
-              </div>
+              </Link>
               <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-12 border rounded-full">

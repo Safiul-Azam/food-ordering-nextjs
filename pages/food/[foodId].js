@@ -1,11 +1,18 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaHeart, FaMinus, FaPlus } from "react-icons/fa";
+import { useDispatch } from "react-redux";
 import RelatedFood from "../../components/SingleFood/RelatedFood";
 import ScrollFoodView from "../../components/SingleFood/ScrollFoodView";
+import { addFood } from "../../redux/cartSlice";
 
 function singleFood({ food }) {
+  console.log(food);
   const [scroll, setScroll] = useState(false);
+  const dispatch = useDispatch();
+  const [price, setPrice] = useState(food.price);
+  const [quantity, setQuantity] = useState(3);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
@@ -15,6 +22,9 @@ function singleFood({ food }) {
       }
     });
   }, []);
+  const handleClick = () => {
+    dispatch(addFood({ ...food, price,quantity }));
+  };
   return (
     <>
       <div className="py-20 container mx-auto flex space-x-10 items-center">
@@ -31,16 +41,24 @@ function singleFood({ food }) {
           <h3 className="text-3xl font-bold text-secondary">${food.price}</h3>
           <hr className="border-gray-200" />
           <div className="flex items-center justify-between space-x-2">
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2">
               <div className="bg-gray-200 p-2 rounded-full">
                 <FaPlus className=" text-black text-xs" />
               </div>
-              <p className="font-bold text-black">8</p>
+              <input
+                onChange={(e) => setQuantity(e.target.value)}
+                defaultValue={1}
+                type='number'
+                className="font-bold text-black w-10 border-secondary border outline-secondary px-1"
+              />
               <div className="bg-gray-200 p-2 rounded-full">
                 <FaMinus className=" text-black text-xs" />
               </div>
             </div>
-            <button className="btn-secondary btn text-black font-bold w-3/4">
+            <button
+              onClick={handleClick}
+              className="btn-secondary btn text-black font-bold w-3/4"
+            >
               ADD TO CART
             </button>
             <div className="p-3 rounded-xl bg-[#F7F4EF]">
@@ -99,14 +117,15 @@ function singleFood({ food }) {
     </>
   );
 }
-export async function getServerSideProps({params}) {
-  const res = await axios.get(`http://localhost:3000/api/foods/${params.foodId}`);
+export async function getServerSideProps({ params }) {
+  const res = await axios.get(
+    `http://localhost:3000/api/foods/${params.foodId}`
+  );
   return {
     props: {
       food: res.data,
     },
   };
 }
-
 
 export default singleFood;
