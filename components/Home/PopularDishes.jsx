@@ -46,9 +46,11 @@ function PopularDishes({ filterByBtn, foods }) {
                       <p className="text-secondary text-lg font-extrabold">
                         ${food.price}
                       </p>
-                      <div className="bg-secondary p-3 rounded-xl">
-                        <BsBasket2Fill className="hover:text-white text-black cursor-pointer" />
-                      </div>
+                      <Link href={`/food/${food._id}`}>
+                        <div className="bg-secondary p-3 rounded-xl">
+                          <BsBasket2Fill className="hover:text-white text-black cursor-pointer" />
+                        </div>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -92,9 +94,11 @@ function PopularDishes({ filterByBtn, foods }) {
                       <p className="text-secondary text-lg font-extrabold">
                         ${food.price}
                       </p>
-                      <div className="bg-secondary p-3 rounded-xl">
-                        <BsBasket2Fill className="hover:text-white text-black" />
-                      </div>
+                      <Link href={`/food/${food._id}`}>
+                        <div className="bg-secondary p-3 rounded-xl">
+                          <BsBasket2Fill className="hover:text-white text-black cursor-pointer" />
+                        </div>
+                      </Link>
                     </div>
                   </div>
                 </div>
