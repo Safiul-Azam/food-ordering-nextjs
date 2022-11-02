@@ -10,7 +10,7 @@ const Cart = () => {
   console.log(cart);
   const food = cart.foods.map((food) => food);
   return (
-    <div className="grid grid-cols-3">
+    <div className="grid grid-cols-3 pb-16">
       <div className="col-span-2">
         {cart.foods.length <= 0 ? <Link className="" href='/shop'><h3 className="text-secondary hover:underline cursor-pointer text-center mt-20">Please go to our shop page</h3></Link> :<table className="table w-full">
           <thead>
