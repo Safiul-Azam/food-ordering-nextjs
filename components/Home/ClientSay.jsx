@@ -1,4 +1,5 @@
 import axios from "axios";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { BsFillChatQuoteFill } from "react-icons/bs";
@@ -67,9 +68,15 @@ function ClientSay() {
                           <div className="indicator-item indicator-bottom">
                             <BsFillChatQuoteFill className="text-2xl text-primary -mt-3 -ml-4" />
                           </div>
-                          <div className="avatar">
-                            <div className="w-16 rounded-full border">
-                              <img src={singleSay.img} alt="" />
+                          <div className="">
+                            <div className="w-16 rounded-full">
+                              <Image
+                                width={120}
+                                height={120}
+                                className='rounded-full'
+                                src={singleSay.img}
+                                alt=""
+                              />
                             </div>
                           </div>
                         </div>

@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
+import Image from "next/image";
 function ClientSay() {
   const [clientSay, setClientSay] = useState([]);
   useEffect(() => {
@@ -42,13 +43,19 @@ function ClientSay() {
             <SwiperSlide key={singleSay._id}>
               <div className="card-body mb-6 w-3/4 mx-auto">
                 <div className="flex justify-center items-center flex-col space-y-7">
-                  <div className="indicator">
-                    <div className="indicator-item indicator-bottom">
-                      <BsChatQuoteFill className="text-3xl text-primary  -mt-10 -ml-2" />
+                  <div className="indicator relative">
+                    <div className="indicator-item indicator-bottom ">
+                      <BsChatQuoteFill className="text-3xl text-primary bottom-4 -left-7 absolute" />
                     </div>
                     <div className="avatar">
-                      <div className="w-32 rounded-full border">
-                        <img src={singleSay.img} alt="" />
+                      <div className="w-32 rounded-full">
+                        <Image
+                          width={120}
+                          height={120}
+                          className="rounded-full border"
+                          src={singleSay.img}
+                          alt=""
+                        />
                       </div>
                     </div>
                   </div>
