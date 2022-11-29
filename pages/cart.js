@@ -30,8 +30,8 @@ const Cart = () => {
                 <th>{index + 1}</th>
                 <td className="capitalize">
                   <div className="avatar">
-                    <div className="w-12 rounded-full">
-                      <img src={food?.img} alt="" />
+                    <div className="w-20 rounded-full">
+                      <Image width={100} height={100} src={food?.img} alt="" />
                     </div>
                   </div>
                 </td>
@@ -53,7 +53,7 @@ const Cart = () => {
         </table>}
       </div>
       <div className=" py-16 px-10 border space-y-2">
-        <h2 className="text-xl text-center mb-10">Your Cart</h2>
+        <h2 className="text-xl text-center mb-10 font-bold">Your Cart</h2>
         
         <div>
           {cart?.foods?.length === 0 ? <h3 className="text-center text-red-300 my-8">No food has been Selected yet!</h3> :cart?.foods.map((food) => (
