@@ -13,7 +13,7 @@ const CopyRight = () => {
           &copy; Copyright {year} by{" "}
           <span className="text-secondary">SafiFood!</span> All Rights Reserved.
         </p>
-        <img src='https://i.ibb.co/GMHH1W3/footer-img1.png' alt="" />
+        <Image width={300} height={25} src='https://i.ibb.co/GMHH1W3/footer-img1.png' alt="" />
       </div>
     </div>
   );
