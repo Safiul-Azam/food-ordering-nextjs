@@ -9,6 +9,7 @@ import {
   FaTwitter,
   FaPinterestP,
 } from "react-icons/fa";
+import Image from "next/image";
 
 const TalentedChefs = () => {
   const [Chefs, setChefs] = useState([]);
@@ -57,7 +58,13 @@ const TalentedChefs = () => {
             <SwiperSlide key={meetTeam.id}>
               <div className="group">
                 <div className="group text-center relative">
-                  <img src={meetTeam.img} alt="Shoes" />
+                <Image
+                    width='450'
+                    height='500'
+                    className=""
+                    src={meetTeam.img}
+                    alt=""
+                  />
                 <p className="bg-secondary w-1/3 text-center font-bold px-10 absolute bottom-0">
                   {meetTeam.role}
                 </p>
