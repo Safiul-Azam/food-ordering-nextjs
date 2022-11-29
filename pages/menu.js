@@ -1,3 +1,4 @@
+import axios from "axios";
 import Banner from "../components/Menu/Banner";
 import DishesMenu from "../components/Menu/DishesMenu";
 import Facilities from "../components/Menu/Facilities";
@@ -14,12 +15,11 @@ function menu({foods}) {
   );
 }
 export async function getServerSideProps(ctx){
-    const res = await fetch('http://localhost:3000/api/foods')
-    const data = await res.json();
+    const foodsRes = await axios.get('http://localhost:3000/api/foods')
   
     return {
       props:{
-        foods:data,
+        foods:foodsRes.data,
       }
     }
   }

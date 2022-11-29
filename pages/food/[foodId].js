@@ -1,3 +1,4 @@
+import axios from "axios";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { FaHeart, FaMinus, FaPlus } from "react-icons/fa";
@@ -11,7 +12,7 @@ function SingleFood({ food }) {
   const dispatch = useDispatch();
   const [price, setPrice] = useState(food.price);
   const [quantity, setQuantity] = useState(1);
-
+  
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
@@ -126,11 +127,12 @@ function SingleFood({ food }) {
   );
 }
 export async function getServerSideProps({ params }) {
-  const res = await fetch(`http://localhost:3000/api/foods/${params.foodId}`);
-  const data = await res.json();
+  const res = await axios.get(
+    `http://localhost:3000/api/foods/${params.foodId}`
+  );
   return {
     props: {
-      food: data,
+      food: res.data,
     },
   };
 }
