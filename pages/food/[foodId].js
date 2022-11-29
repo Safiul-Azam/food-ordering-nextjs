@@ -7,12 +7,12 @@ import RelatedFood from "../../components/SingleFood/RelatedFood";
 import ScrollFoodView from "../../components/SingleFood/ScrollFoodView";
 import { addFood } from "../../redux/cartSlice";
 
-function singleFood({ food }) {
+function SingleFood({ food }) {
   const [scroll, setScroll] = useState(false);
   const dispatch = useDispatch();
   const [price, setPrice] = useState(food.price);
   const [quantity, setQuantity] = useState(1);
-
+  
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
@@ -137,4 +137,4 @@ export async function getServerSideProps({ params }) {
   };
 }
 
-export default singleFood;
+export default SingleFood;
