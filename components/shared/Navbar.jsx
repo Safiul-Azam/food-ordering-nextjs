@@ -97,11 +97,9 @@ function Navbar() {
                   </span>
                 </div>
               </div>
-              <Link className="" href={'/cart'}>
-                <div className={`${quantity === 0 && 'pointer-events-none'}`}>
-                  <label
-                    className="cursor-pointer border p-3 flex justify-center items-center rounded-full"
-                  >
+              <Link className="" href={"/cart"}>
+                <div className={`${quantity === 0 && "pointer-events-none"}`}>
+                  <label className="cursor-pointer border p-3 flex justify-center items-center rounded-full">
                     <div className="indicator">
                       <GiShoppingCart className="text-2xl" />
                       <span className="badge badge-sm indicator-item badge-secondary">
@@ -114,7 +112,10 @@ function Navbar() {
               <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-12 border rounded-full">
-                    <img
+                    <Image
+                      width={120}
+                      height={120}
+                      className='rounded-full'
                       src="https://i.ibb.co/BNKwgKz/User-Profile.png"
                       alt=""
                     />

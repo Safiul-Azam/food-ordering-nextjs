@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function Quality() {
   const qualities = [
     {
@@ -23,7 +25,7 @@ function Quality() {
     <div className="container mx-auto ">
       {qualities.map((quality) => {
         return (
-          <div className={`flex justify-between items-center my-20 space-x-10`} key={quality.id}>
+          <div className={`flex justify-between items-center my-20 space-x-20`} key={quality.id}>
             <div className="w-3/4">
               <h4 className="text-lg text-secondary mb-3">Our Quality</h4>
               <h2 className="text-4xl text-[#1E1D23] font-extrabold">{quality.title}</h2>
@@ -33,7 +35,7 @@ function Quality() {
               </button>
             </div>
             <div className="w-3/4">
-              <img src={quality.img} alt="" />
+              <Image width={500} height={500} src={quality.img} alt="" />
             </div>
           </div>
         );
