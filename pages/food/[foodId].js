@@ -1,4 +1,5 @@
 import axios from "axios";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { FaHeart, FaMinus, FaPlus } from "react-icons/fa";
 import { useDispatch } from "react-redux";
@@ -22,14 +23,16 @@ function singleFood({ food }) {
     });
   }, []);
   const handleClick = () => {
-    dispatch(addFood({ ...food, price,quantity }));
+    dispatch(addFood({ ...food, price, quantity }));
   };
   return (
     <>
       <div className="py-20 container mx-auto flex space-x-10 items-center">
-        <div className="w-1/2  border p-3 rounded-3xl">
-          <img
-            className="w-full p-8 rounded-2xl bg-[#F7F4EF]"
+        <div className="w-1/2 border p-2 rounded-3xl">
+          <Image
+            width={750}
+            height={750}
+            className="rounded-2xl bg-[#F7F4EF]"
             src={food.img}
             alt=""
           />
@@ -47,7 +50,7 @@ function singleFood({ food }) {
               <input
                 onChange={(e) => setQuantity(e.target.value)}
                 defaultValue={1}
-                type='number'
+                type="number"
                 className="font-bold text-black w-10 border-secondary border outline-secondary px-1"
               />
               <div className="bg-gray-200 p-2 rounded-full">
@@ -91,7 +94,14 @@ function singleFood({ food }) {
           <hr className="border-gray-200" />
           <div className="flex items-center space-x-10">
             <h3 className="text-lg font-bold">Guaranteed Safe Checkout</h3>
-            <img src="https://i.ibb.co/Xz3Nys4/trust-symbols.png" alt="" />
+            <div>
+              <Image
+                width={250}
+                height={25}
+                src="https://i.ibb.co/Xz3Nys4/trust-symbols.png"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
