@@ -1,4 +1,3 @@
-import axios from "axios";
 import Banner from "../components/Shop/Banner";
 import DishesMenu from "../components/Shop/DishesMenu";
 function shop({ foods }) {
@@ -10,11 +9,11 @@ function shop({ foods }) {
   );
 }
 export async function getServerSideProps(ctx) {
-  const foodsRes = await axios.get("http://localhost:3000/api/foods");
-
+  const res = await fetch("http://localhost:3000/api/foods");
+  const data = await res.json();
   return {
     props: {
-      foods: foodsRes.data,
+      foods: data,
     },
   };
 }

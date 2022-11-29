@@ -9,7 +9,7 @@ import Special from "../components/Home/Special";
 import TopRecipes from "../components/Home/TopRecipes";
 import styles from "../styles/Home.module.css";
 import DishesMenu from '../components/Home/DishesMenu'
-import axios from "axios";
+
 
 export default function Home({foods,reviews}) {
   return (
@@ -33,12 +33,13 @@ export default function Home({foods,reviews}) {
 }
 
 export async function getServerSideProps(ctx){
-  const foodsRes = await axios.get('http://localhost:3000/api/foods')
+  const res = await fetch('http://localhost:3000/api/foods')
+  const data = await res.json();
   // const reviewsRes = await axios.get('http://localhost:3000/api/reviews')
 
   return {
     props:{
-      foods:foodsRes.data,
+      foods:data,
       // reviews:reviewsRes.data
     }
   }
