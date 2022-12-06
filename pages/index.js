@@ -8,10 +8,10 @@ import Menus from "../components/Home/Menus";
 import Special from "../components/Home/Special";
 import TopRecipes from "../components/Home/TopRecipes";
 import styles from "../styles/Home.module.css";
-import DishesMenu from "../components/Home/DishesMenu";
+import DishesMenu from '../components/Home/DishesMenu'
 import axios from "axios";
 
-export default function Home({ foods, reviews }) {
+export default function Home({foods,reviews}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -22,26 +22,24 @@ export default function Home({ foods, reviews }) {
       <Banner />
       <Menus />
       <Special />
-      <DishesMenu foods={foods} />
+      <DishesMenu foods={foods}/>
       <TastyFood />
-      <TopRecipes foods={foods} />
-      <ClientSay />
+      <TopRecipes foods={foods}/>
+      <ClientSay/>
       <BestBurger />
       <JoinUs />
     </div>
   );
 }
 
-export async function getServerSideProps(ctx) {
-  
-  try {
-    const foodsRes = await axios.get("http://localhost:3000/api/foods");
+export async function getServerSideProps(ctx){
+  const foodsRes = await axios.get('http://localhost:3000/api/foods')
+  // const reviewsRes = await axios.get('http://localhost:3000/api/reviews')
+
   return {
-    props: {
-      foods: foodsRes.data,
-    },
-  };
-  } catch (error) {
-    console.error(error.response.data);
+    props:{
+      foods:foodsRes.data,
+      // reviews:reviewsRes.data
+    }
   }
 }
