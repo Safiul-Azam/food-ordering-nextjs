@@ -127,14 +127,18 @@ function SingleFood({ food }) {
   );
 }
 export async function getServerSideProps({ params }) {
-  const res = await axios.get(
-    `http://localhost:3000/api/foods/${params.foodId}`
-  );
-  return {
-    props: {
-      food: res.data,
-    },
-  };
+  try {
+    const res = await axios.get(
+      `http://localhost:3000/api/foods/${params.foodId}`
+    );
+    return {
+      props: {
+        food: res.data,
+      },
+    };
+  } catch (error) {
+    console.error(error.response.data);
+  }
 }
 
 export default SingleFood;

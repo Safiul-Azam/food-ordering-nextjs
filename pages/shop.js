@@ -10,12 +10,16 @@ function shop({ foods }) {
   );
 }
 export async function getServerSideProps(ctx) {
-  const foodsRes = await axios.get("http://localhost:3000/api/foods");
+  try {
+    const foodsRes = await axios.get("http://localhost:3000/api/foods");
 
-  return {
-    props: {
-      foods: foodsRes.data,
-    },
-  };
+    return {
+      props: {
+        foods: foodsRes.data,
+      },
+    };
+  } catch (error) {
+    console.error(error.response.data);
+  }
 }
 export default shop;
