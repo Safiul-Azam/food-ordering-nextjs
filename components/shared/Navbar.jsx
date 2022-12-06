@@ -29,17 +29,17 @@ function Navbar() {
         </Link>
       </li>
       <li>
-        <Link href="/menu">
+        <Link href="menu">
           <a>Menu</a>
         </Link>
       </li>
       <li>
-        <Link href="/about">
+        <Link href="about">
           <a>About</a>
         </Link>
       </li>
       <li>
-        <Link href="/shop">
+        <Link href="shop">
           <a>Shop</a>
         </Link>
       </li>
@@ -54,7 +54,7 @@ function Navbar() {
         </Link>
       </li>
       <li>
-        <Link href="/contact">
+        <Link href="contact">
           <a>Contact</a>
         </Link>
       </li>
