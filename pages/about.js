@@ -1,3 +1,4 @@
+import axios from "axios";
 import Banner from "../components/About/Banner";
 import BurgerIdeas from "../components/About/BurgerIdeas";
 import ClientSay from "../components/About/ClientSay";
@@ -20,7 +21,7 @@ function about({ reviews }) {
   );
 }
 export async function getServerSideProps(ctx) {
-  const res = await fetch("http://localhost:3000/api/reviews");
+  const res = await axios.get("http://localhost:3000/api/reviews");
   const data = await res.json();
 
   return {

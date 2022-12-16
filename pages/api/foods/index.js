@@ -3,7 +3,7 @@ import dbConnect from "../../../utility/mongo";
 
 export default async function handler(req, res) {
   const { method } = req;
-  dbConnect();
+  await dbConnect();
   if (method === "GET") {
     try {
       const foods = await Food.find();
